@@ -18,7 +18,7 @@ int		ret_perror(const char *error_msg)
 	return (0);
 }
 
-void	*ret_null_perror(const char *error_msg)
+void    *ret_null_perror(const char *error_msg)
 {
 	perror(error_msg);
 	return (NULL);

@@ -1,0 +1,87 @@
+map
+{
+	Player
+	{
+		height = 6
+		width = 2
+		x = 0
+		y = 0
+		z = 0
+	}
+	Sector
+	{
+		floorHeight = 81
+		ceilHeight = 18
+		line
+		{
+			dot = (1, 5)
+			dot = (1, 7)
+		}
+		line
+		{
+			dot = (dasd, dsad)
+			dot = (6, 81161)	
+		}
+		line
+		{
+			dot = (6, 8)	
+			dot = (1, 5)
+		}
+	}
+	Sector
+	{
+		floorHeight = 25
+		ceilHeight = 10
+		line
+		{
+			dot = (5, u)
+			dot = (8, 9)
+		}
+		line
+		{
+			dot = (4, 7)
+			dot = (8, 8)
+		}
+		line
+		{
+			dot = (8, 8)
+			dot = (6, 10)	
+		}
+		line
+		{
+			dot = (6, 10)	
+			dot = (5, 5)
+		}
+	}
+	Sector
+	{
+		floorHeight = 34
+		ceilHeight = 29
+		line
+		{
+			dot = (5, 5)
+			dot = (4, 7)
+		}
+		line
+		{
+			dot = (4, 7)
+			dot = (8, 8)
+		}
+		line
+		{
+			dot = (8, 8)
+			dot = (6, 10)	
+		}
+		line
+		{
+			dot = (6, 10)	
+			dot = (5, 5)
+		}
+	}
+	test
+	{
+		x = 4
+		y = 4
+		hitbox = 1
+	}
+}

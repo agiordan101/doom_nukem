@@ -23,5 +23,5 @@ int		game_loop(t_win *win, t_map *map)
 			SDL_RenderPresent(win->rend);
 		}
 	}
-	return (SUCCESS);
+	return (1);
 }

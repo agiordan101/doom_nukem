@@ -6,9 +6,9 @@ t_mouse		*mouse_refresh()
 	Uint32	tmp;
 	static t_mouse mouse = (t_mouse){0, 0, 
 									SDL_FALSE,
-									{(t_button){0, 0, 0},
-									(t_button){0, 0, 0},
-									(t_button){0, 0, 0}}};
+									{(t_mouse_button){0, 0, 0},
+									(t_mouse_button){0, 0, 0},
+									(t_mouse_button){0, 0, 0}}};
 
 	tmp = mouse.flags;
 	mouse.flags = SDL_GetMouseState(&mouse.x, &mouse.y);

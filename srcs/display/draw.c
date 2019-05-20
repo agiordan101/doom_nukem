@@ -15,7 +15,7 @@ void	draw(t_win *win, t_map *map, t_player *player)
 		line = sector->lines;
 		while (line)
 		{
-			draw_line(win, line->d1, line->d2);
+			draw_line(win, line->p1, line->p2);
 			line = line->next;
 		}
 		sector = sector->next;

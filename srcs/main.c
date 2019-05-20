@@ -1,19 +1,19 @@
+#include <fcntl.h>
 #include "doom_nukem.h"
 
 /*static int	init_equations(t_map *map)
 {
 	t_sector	*sector;
 	t_linedef	*line;
-
 	sector = map->sectors;
 	while (sector)
 	{
 		line = sector->lines;
 		while (line)
 		{
-			line->equation.a = (line->d2.y - line->d1.y) /\
-								(line->d2.x - line->d1.x);
-			line->equation.b = line->d1.y - line->equation.a * line->d1.x;
+			line->equation.a = (line->p2.y - line->p1.y) /\
+								(line->p2.x - line->p1.x);
+			line->equation.b = line->p1.y - line->equation.a * line->p1.x;
 			line = line->next;
 		}
 		sector = sector->next;
@@ -26,52 +26,49 @@ static int	init(t_win *win, t_map *map, t_player *player)
 	t_linedef	*tmp;
 
 	//init_equations(map);
-	win->width = 2000;
-	win->height = 1000;
+	win->w = 1500;
+	win->h = 800;
 	player->hitbox = 10;
-	player->pos = (t_fdot){win->width / 2, win->height / 2 - 100};
+	player->pos = (t_dot){win->w / 2, win->h / 2 - 100};
 	player->sector = 0;
-	player->dir = PI / 2;
-	player->const_vel = 0.8;
-	if (!(map->sectors = (t_sector *)malloc(sizeof(t_sector))))
-		return (MALLOC_ERROR);
-	map->sectors->lines = NULL;
-	map->sectors->next = NULL;
-	tmp = new_linedef((t_line){(t_fdot){0, 0},\
-										(t_fdot){win->width, win->height}},\
+	player->dir = M_PI_2;
+	player->const_vel = 5;
+	add_sector(&map->sectors, new_sector());
+	tmp = new_linedef((t_line){(t_dot){0, 0},\
+										(t_dot){win->w, win->h}},\
 										NULL, 0);
-	map_add_line(map, 0, tmp);
-	tmp = new_linedef((t_line){(t_fdot){0, win->height},\
-										(t_fdot){win->width, 0}},\
+	add_linedef(&map->sectors->lines, tmp);
+	tmp = new_linedef((t_line){(t_dot){0, win->h},\
+										(t_dot){win->w, 0}},\
 										NULL, 0);
-	map_add_line(map, 0, tmp);
-	return (SUCCESS);
+	add_linedef(&map->sectors->lines, tmp);
+	return (1);
 }
 
-int		main(int ac, char **av)
+int     main(int argc, char **argv)
 {
-	t_win	win;
-	t_map	map;
+    int     fd;
+    int     fd1;
+    t_win   win;
+    t_map   map;
 
+
+    if (!argc)
+        argc = 0;
+    if ((((fd = open(argv[1] , O_RDONLY)) <= 0) || ((fd1 = open(argv[1], O_RDONLY)) <= 0)))
+        return (ret_error("open error"));
+    ft_data_storing(fd, fd1);
 	if (init(&win, &map, &(map.player)) < 0)
-		return (ret_error("Error init"));
-	printf("Fin init main\n");
-	if (SDL_Init(SDL_INIT_VIDEO) < 0)
-		return (ret_error(SDL_GetError()));
-	printf("Fin SDL init main\n");
-
-	if (!(create_window(&win, "doom_nukem", (SDL_Rect){0, 0, win.width, win.height}, SDL_WINDOW_SHOWN)))
-		return (0);
-	printf("Fin create window main\n");
-
-	if (ac >= 2 && !ft_atoi(av[1]))
-		;//editor_loop(&win);
-	else
-		game_loop(&win, &map);
-	printf("Fin game loop main\n");
-
-	SDL_DestroyWindow(win.ptr);
-	SDL_DestroyRenderer(win.rend);
-	SDL_Quit();
-	return (SUCCESS);
+		return (ret_error("init error"));
+    if (SDL_Init(SDL_INIT_VIDEO) < 0 || TTF_Init() == -1)
+        return (ret_error(SDL_GetError()));
+    if (!(create_window(&win, "doom_nukem", (SDL_Rect){200, 200, 1500, 800}, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE)))
+        return (0);
+    SDL_SetRenderDrawColor(win.rend, 255, 255, 255, 255);
+    //editor_loop(&win);
+	game_loop(&win, &map);
+    SDL_DestroyWindow(win.ptr);
+    SDL_DestroyRenderer(win.rend);
+    SDL_Quit();
+    return (0);
 }
