@@ -1,0 +1,620 @@
+frame
+{
+	type : UI_FRAME_SIMPLE
+	resize_type : UI_RESIZE_ALL_LINEAR
+	ratio : 0.025 0.1 0.05 0.875
+	data
+	{
+		texture : "textures/ui_frame.png"
+	}
+	button
+	{
+		id : "b_wall"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0 1 0.075
+		data
+		{
+			text : "Wall"
+            texture_normal : "textures/ui_normal_button_square.png"
+            texture_clicked : "textures/ui_clicked_button_square.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_square.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_flat"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.075 1 0.075
+		data
+		{
+			text : "Flat"
+            texture_normal : "textures/ui_normal_button_square.png"
+            texture_clicked : "textures/ui_clicked_button_square.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_square.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_inclined"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.15 1 0.075
+		data
+		{
+			text : "RAMPE"
+            texture_normal : "textures/ui_normal_button_square.png"
+            texture_clicked : "textures/ui_clicked_button_square.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_square.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_player"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.225 1 0.075
+		data
+		{
+			text : "Player"
+            texture_normal : "textures/ui_normal_button_square.png"
+            texture_clicked : "textures/ui_clicked_button_square.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_square.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_mob"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.3 1 0.075
+		data
+		{
+			text : ""
+            texture_normal : "textures/ghost.png"
+            texture_clicked : "textures/ui_clicked_button.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_grey.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_heal"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.375 1 0.075
+		data
+		{
+			text : ""
+            texture_normal : "textures/healthPotion.png"
+            texture_clicked : "textures/ui_clicked_button.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_grey.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_shield"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.45 1 0.075
+		data
+		{
+			text : ""
+            texture_normal : "textures/shieldPotion.png"
+            texture_clicked : "textures/ui_clicked_button.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_grey.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_gravity"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.525 1 0.075
+		data
+		{
+			text : ""
+            texture_normal : "textures/pq.png"
+            texture_clicked : "textures/ui_clicked_button.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_grey.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_bullet"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.6 1 0.075
+		data
+		{
+			text : ""
+            texture_normal : "textures/Ammo_box_icon.png"
+            texture_clicked : "textures/ui_clicked_button.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_grey.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_box"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0.675 1 0.075
+		data
+		{
+			text : "BOX"
+            texture_normal : "textures/ui_normal_button_square.png"
+            texture_clicked : "textures/ui_clicked_button_square.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_square.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+}
+frame
+{
+	type : UI_FRAME_SIMPLE
+	resize_type : UI_RESIZE_ALL_LINEAR
+	ratio : 0.1 0.1 0.05 0.75
+	data
+	{
+		texture : "textures/ui_frame.png"
+	}
+	button
+	{
+		id : "b_select"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0 1 0.1
+		data
+		{
+			text : "S"
+            texture_normal : "textures/ui_normal_button_square.png"
+            texture_clicked : "textures/ui_clicked_button_square.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_square.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+}
+frame
+{
+	type : UI_FRAME_SIMPLE
+	resize_type : UI_RESIZE_ALL_LINEAR
+	ratio : 0.75 0.85 0.2 0.10
+	data
+	{
+		texture : "textures/ui_frame.png"
+	}
+    button
+    {
+        id : "b_export_path"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.05 0.2 0.7 0.35
+        data
+        {
+            name : "name"
+            text : "./maps/new_map"
+            max_text_size : 30
+            min_int : 0
+            max_int : 0
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_NONE
+        }
+    }
+	button
+	{
+		id : "b_export"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0.775 0.2 0.2 0.35
+		data
+		{
+			text : "Export"
+            texture_normal : "textures/ui_normal_button.png"
+            texture_clicked : "textures/ui_clicked_button.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_grey.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_delete"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0.05 0.6 0.3 0.35
+		data
+		{
+			text : "Delete Map"
+            texture_normal : "textures/ui_normal_button.png"
+            texture_clicked : "textures/ui_clicked_button.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_grey.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+}
+frame
+{
+	type : UI_FRAME_SIMPLE
+	resize_type : UI_RESIZE_ALL_LINEAR
+	ratio : 0.85 0.1 0.1 0.2
+	data
+	{
+		texture : "textures/ui_frame.png"
+	}
+    button
+    {
+        id : "b_display_limits"
+        type : UI_BUTTON_TEXT_AREA
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0 0.8 0.25
+        data
+        {
+            text : "Display Limits"
+            resize_text : UI_RESIZE_TEXT_LINEAR
+            text_height : 0.5
+            text_align : TEXT_ALIGN_CENTER
+            text_color : 255 255 255 255
+        }
+    }
+    button
+    {
+        id : "b_z_min"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.4 0.8 0.175
+        data
+        {
+            name : "% min"
+            text : "0"
+            max_text_size : 3
+            min_int : 0
+            max_int : 100
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+    button
+    {
+        id : "b_z_max"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.65 0.8 0.175
+        data
+        {
+            name : "% max"
+            text : "100"
+            max_text_size : 3
+            min_int : 0
+            max_int : 100
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+}
+frame
+{
+	type : UI_FRAME_SIMPLE
+	resize_type : UI_RESIZE_ALL_LINEAR
+	ratio : 0.75 0.35 0.2 0.48
+	data
+	{
+		texture : "textures/ui_frame.png"
+	}
+    button
+    {
+        id : "b_properties"
+        type : UI_BUTTON_TEXT_AREA
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0 0 1 0.075
+        data
+        {
+            text : "Properties"
+            resize_text : UI_RESIZE_TEXT_LINEAR
+            text_height : 1
+            text_align : TEXT_ALIGN_CENTER
+            text_color : 255 255 255 255
+        }
+    }
+    button
+    {
+        id : "b_property_1"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.1 0.8 0.075
+        data
+        {
+            name : ""
+            text : ""
+            max_text_size : 20
+            min_int : 0
+            max_int : 0
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_NONE
+        }
+    }
+    button
+    {
+        id : "b_property_2"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.2 0.8 0.075
+        data
+        {
+            name : ""
+            text : ""
+            max_text_size : 6
+            min_int : -30000
+            max_int : 30000
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+    button
+    {
+        id : "b_property_3"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.3 0.8 0.075
+        data
+        {
+            name : ""
+            text : ""
+            max_text_size : 6
+            min_int : -30000
+            max_int : 30000
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+    button
+    {
+        id : "b_property_4"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.4 0.8 0.075
+        data
+        {
+            name : ""
+            text : ""
+            max_text_size : 6
+            min_int : -30000
+            max_int : 30000
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+    button
+    {
+        id : "b_property_5"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.5 0.8 0.075
+        data
+        {
+            name : ""
+            text : ""
+            max_text_size : 6
+            min_int : -30000
+            max_int : 30000
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+    button
+    {
+        id : "b_property_6"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.6 0.8 0.075
+        data
+        {
+            name : ""
+            text : ""
+            max_text_size : 6
+            min_int : -30000
+            max_int : 30000
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+    button
+    {
+        id : "b_property_7"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.7 0.8 0.075
+        data
+        {
+            name : ""
+            text : ""
+            max_text_size : 6
+            min_int : -30000
+            max_int : 30000
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+    button
+    {
+        id : "b_property_8"
+        type : UI_BUTTON_TEXT_ENTRY
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.8 0.8 0.075
+        data
+        {
+            name : ""
+            text : ""
+            max_text_size : 6
+            min_int : -30000
+            max_int : 30000
+            name_side_texture : "textures/ui_text_entry_button_normal.png"
+            normal_box_texture : "textures/ui_text_entry_button_normal.png"
+            writting_box_texture : "textures/ui_text_entry_button_writting.png"
+            text_side : UI_TEXT_SIDE_LEFT
+            text_type : UI_TEXT_TYPE_DIGITAL
+        }
+    }
+}
+frame
+{
+	type : UI_FRAME_SIMPLE
+	resize_type : UI_RESIZE_ALL_LINEAR
+	ratio : 0.1 0.9 0.2 0.075
+	data
+	{
+		texture : "textures/ui_frame.png"
+	}
+    button
+    {
+        id : "b_poly_position"
+        type : UI_BUTTON_TEXT_AREA
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0 0.8 0.3
+        data
+        {
+            text : "Poly Positions"
+            resize_text : UI_RESIZE_TEXT_LINEAR
+            text_height : 1
+            text_align : TEXT_ALIGN_CENTER
+            text_color : 255 255 255 255
+        }
+    }
+    button
+    {
+        id : "b_poly_dot_0"
+        type : UI_BUTTON_TEXT_AREA
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.35 0.4 0.3
+        data
+        {
+            text : "dot[0] = ?"
+            resize_text : UI_RESIZE_TEXT_LINEAR
+            text_height : 1
+            text_align : TEXT_ALIGN_LEFT
+            text_color : 255 255 255 255
+        }
+    }
+    button
+    {
+        id : "b_poly_dot_1"
+        type : UI_BUTTON_TEXT_AREA
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.5 0.35 0.4 0.3
+        data
+        {
+            text : "dot[1] = ?"
+            resize_text : UI_RESIZE_TEXT_LINEAR
+            text_height : 1
+            text_align : TEXT_ALIGN_LEFT
+            text_color : 255 255 255 255
+        }
+    }
+    button
+    {
+        id : "b_poly_dot_2"
+        type : UI_BUTTON_TEXT_AREA
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.1 0.65 0.4 0.3
+        data
+        {
+            text : "dot[2] = ?"
+            resize_text : UI_RESIZE_TEXT_LINEAR
+            text_height : 1
+            text_align : TEXT_ALIGN_LEFT
+            text_color : 255 255 255 255
+        }
+    }
+    button
+    {
+        id : "b_poly_dot_3"
+        type : UI_BUTTON_TEXT_AREA
+        resize_type : UI_RESIZE_ALL_LINEAR
+        ratio : 0.5 0.65 0.4 0.3
+        data
+        {
+            text : "dot[3] = ?"
+            resize_text : UI_RESIZE_TEXT_LINEAR
+            text_height : 1
+            text_align : TEXT_ALIGN_LEFT
+            text_color : 255 255 255 255
+        }
+    }
+}
+frame
+{
+	type : UI_FRAME_SIMPLE
+	resize_type : UI_RESIZE_ALL_LINEAR
+	ratio : 0.31 0.9375 0.2 0.0375
+	data
+	{
+		texture : "textures/ui_frame.png"
+	}
+	button
+	{
+		id : "b_calc_normal"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0 0 0.125 1
+		data
+		{
+			text : "T"
+            texture_normal : "textures/ui_normal_button_square.png"
+            texture_clicked : "textures/ui_clicked_button_square.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_square.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+	button
+	{
+		id : "b_calc_z"
+		type : UI_BUTTON_SIMPLE
+		resize_type : UI_RESIZE_ALL_LINEAR
+		ratio : 0.125 0 0.125 1
+		data
+		{
+			text : "Z"
+            texture_normal : "textures/ui_normal_button_square.png"
+            texture_clicked : "textures/ui_clicked_button_square.png"
+            texture_on_mouse : "textures/ui_on_mouse_button_square.png"
+			clicked_condition : UI_MOUSE_LEFT
+		}
+	}
+}

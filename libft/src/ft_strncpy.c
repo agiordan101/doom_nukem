@@ -20,9 +20,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 
 	i = 0;
 	while (*src != '\0' && i < len)
-	{
 		dst[i++] = *src++;
-	}
 	ft_bzero(dst + i, len - i);
 	return (dst);
 }

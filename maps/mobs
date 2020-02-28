@@ -1,0 +1,212 @@
+Player
+{
+	posx = 200
+	posy = 200
+	posz = 150
+	dir = -90
+	width = 60
+	height = 180
+	velocity = 10
+}
+Object
+{	
+	type = Potion
+	posx = 400
+	posy = 950
+	posz = 150
+	type = life
+	width = 30
+	height = 50
+	texture = healthPotion.png
+}
+Object
+{	
+	type = Potion
+	posx = 400
+	posy = 950
+	posz = 150
+	type = 12
+	width = 70
+	height = 70
+	texture = healthPotion.png
+}
+
+Mob
+{	
+	posx = 200
+	posy = 700
+	posz = 150
+	health = 50
+	type = 1
+	width = 60
+	height = 60
+	dir = -90
+	velocity = 2
+	texture = Mario_Ghost.png
+}
+
+Mob
+{	
+	posx = 200
+	posy = 700
+	posz = 150
+	health = 50
+	type = 1
+	width = 60
+	height = 60
+	dir = -90
+	velocity = 2
+	texture = Mario_Ghost.png
+}
+
+
+/* Murs du haut */
+
+Polygon									//Mur entier
+{
+	dot = x:100, y:650, z:200
+	dot = x:100, y:150, z:200
+	dot = x:100, y:150, z:50
+	dot = x:100, y:650, z:50
+	texture = Brique.png
+}
+Polygon									//Demi-mur
+{
+	dot = x:600, y:150, z:125
+	dot = x:600, y:650, z:125
+	dot = x:600, y:650, z:50
+	dot = x:600, y:150, z:50
+	texture = Brique.png
+}
+Polygon									//Fond principal renfoncement
+{
+	dot = x:700, y:150, z:200
+	dot = x:700, y:650, z:200
+	dot = x:700, y:650, z:125
+	dot = x:700, y:150, z:125
+	texture = Plafond.png
+}
+Polygon									//Fond renfoncement 2
+{
+	dot = x:700, y:150, z:200
+	dot = x:600, y:150, z:200
+	dot = x:600, y:150, z:125
+	dot = x:700, y:150, z:125
+	texture = Brique.png
+}
+Polygon									//Fond renfoncement 3
+{
+	dot = x:700, y:650, z:200
+	dot = x:600, y:650, z:200
+	dot = x:600, y:650, z:125
+	dot = x:700, y:650, z:125
+	texture = Brique.png
+}
+Polygon									//Fond
+{
+	dot = x:100, y:150, z:200
+	dot = x:600, y:150, z:200
+	dot = x:600, y:150, z:50
+	dot = x:100, y:150, z:50
+	texture = Elephantride.png
+}
+
+
+
+/* Murs du bas */
+
+Polygon									//Mur complet
+{
+	dot = x:100, y:650, z:200
+	dot = x:100, y:1150, z:200
+	dot = x:100, y:1150, z:0
+	dot = x:100, y:650, z:0
+	texture = Brique.png
+}
+Polygon									//Mur complet
+{
+	dot = x:600, y:1150, z:200
+	dot = x:600, y:650, z:200
+	dot = x:600, y:650, z:0
+	dot = x:600, y:1150, z:0
+	texture = Brique.png
+}
+Polygon									//Fond
+{
+	dot = x:100, y:1150, z:200
+	dot = x:600, y:1150, z:200
+	dot = x:600, y:1150, z:0
+	dot = x:100, y:1150, z:0
+	texture = Elephantride.png
+}
+
+
+Polygon								//Rampe
+{
+	dot = x:100, y:900, z:0
+	dot = x:100, y:1150, z:80
+	dot = x:600, y:1150, z:80
+	dot = x:600, y:900, z:0
+	texture = Brique.png
+}
+Polygon								//Merde volante
+{
+	dot = x:400, y:800, z:42
+	dot = x:400, y:850, z:72
+	dot = x:450, y:850, z:72
+	dot = x:450, y:800, z:42
+	texture = Brique.png
+}
+
+
+Polygon								//Sol bas
+{
+	dot = x:100, y:650, z:0
+	dot = x:100, y:1150, z:0
+	dot = x:600, y:1150, z:0
+	dot = x:600, y:650, z:0
+	texture = Plafond.png
+}
+Polygon								//Marche
+{
+	dot = x:100, y:650, z:0
+	dot = x:600, y:650, z:0
+	dot = x:600, y:650, z:50
+	dot = x:100, y:650, z:50
+	texture = Brique.png
+}
+Polygon								//Sol haut
+{
+	dot = x:100, y:650, z:50
+	dot = x:100, y:150, z:50
+	dot = x:600, y:150, z:50
+	dot = x:600, y:650, z:50
+	texture = Plafond.png
+}
+Polygon									//Sol renfoncement
+{
+	dot = x:700, y:150, z:125
+	dot = x:700, y:650, z:125
+	dot = x:600, y:650, z:125
+	dot = x:600, y:150, z:125
+	texture = Plafond.png
+}
+
+
+
+Polygon								//Plafond
+{
+	dot = x:100, y:1150, z:200
+	dot = x:100, y:150, z:200
+	dot = x:600, y:150, z:200
+	dot = x:600, y:1150, z:200
+	texture = Plafond.png
+}
+Polygon								//Plafond renforcement
+{
+	dot = x:600, y:650, z:200
+	dot = x:600, y:150, z:200
+	dot = x:700, y:150, z:200
+	dot = x:700, y:650, z:200
+	texture = Plafond.png
+}

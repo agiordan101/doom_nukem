@@ -35,9 +35,3 @@ void		delete_sector_linedef(t_sector *sectors, Uint32 delete_flags)
 		s = s->next;
 	}
 }
-
-void		delete_all_linedef(t_map_editor *map, Uint32 delete_flags)
-{
-	delete_linedef(&map->lines, delete_flags);
-	delete_sector_linedef(map->sectors, delete_flags);
-}

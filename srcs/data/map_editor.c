@@ -10,7 +10,7 @@ SDL_bool	is_line_vertical(int x1, int x2, int pitch)
 	return (abs(x1 - x2) < pitch);
 }
 
-void		map_zoom(t_map_editor *map, double zoom)
+void		map_zoom(t_map_editor *map, float zoom)
 {
 	map->x -= map->unit * zoom * map->w / 2;
 	map->y -= map->unit * zoom * map->h / 2;

@@ -1,87 +1,101 @@
-map
+Player
 {
-	Player
+	posx = 260
+	posy = 180
+	width = 20
+	height = 80
+	sector = 1
+	velocity = 2
+}
+Object
+{
+	posx = 100
+	posy = 150
+	sector = 1
+	id = 8
+	id_texture = 12
+}
+Object
+{
+	posx = 28
+	posy = 141
+	sector = 0
+	id = 4
+	id_texture = 7
+}
+Object
+{
+	posx = 42
+	posy = 101
+	sector = 1
+	id = 2
+	id_texture = 445
+}
+Sector
+{
+	name = jean-giordan
+	ceilHeight = 100
+	floorHeight = 0
+	line
 	{
-		height = 6
-		width = 2
-		x = 0
-		y = 0
-		z = 0
+		dot = (120, 120)
+		dot = (600, 240)
+		flags = PORTAL
+		id = 1
 	}
-	Sector
+	line
 	{
-		floorHeight = 81
-		ceilHeight = 18
-		line
-		{
-			dot = (1, 5)
-			dot = (1, 7)
-		}
-		line
-		{
-			dot = (dasd, dsad)
-			dot = (6, 81161)	
-		}
-		line
-		{
-			dot = (6, 8)	
-			dot = (1, 5)
-		}
+		dot = (600, 240)
+		dot = (660, 420)
+		flags = WALL
+		id = 0
 	}
-	Sector
+	line
 	{
-		floorHeight = 25
-		ceilHeight = 10
-		line
-		{
-			dot = (5, u)
-			dot = (8, 9)
-		}
-		line
-		{
-			dot = (4, 7)
-			dot = (8, 8)
-		}
-		line
-		{
-			dot = (8, 8)
-			dot = (6, 10)	
-		}
-		line
-		{
-			dot = (6, 10)	
-			dot = (5, 5)
-		}
+		dot = (660, 420)
+		dot = (360, 300)
+		flags = WALL
+		id = 0
 	}
-	Sector
+	line
 	{
-		floorHeight = 34
-		ceilHeight = 29
-		line
-		{
-			dot = (5, 5)
-			dot = (4, 7)
-		}
-		line
-		{
-			dot = (4, 7)
-			dot = (8, 8)
-		}
-		line
-		{
-			dot = (8, 8)
-			dot = (6, 10)	
-		}
-		line
-		{
-			dot = (6, 10)	
-			dot = (5, 5)
-		}
+		dot = (360, 300)
+		dot = (120, 120)
+		flags = WALL
+		id = 0
 	}
-	test
+}
+Sector
+{
+	name = jean-ducimet
+	ceilHeight = 200
+	floorHeight = 0
+	line
 	{
-		x = 4
-		y = 4
-		hitbox = 1
+		dot = (840, 180)
+		dot = (1080, 240)
+		flags = WALL
+		id = 0
+	}
+	line
+	{
+		dot = (1080, 240)
+		dot = (900, 480)
+		flags = WALL
+		id = 0
+	}
+	line
+	{
+		dot = (900, 480)
+		dot = (720, 300)
+		flags = WALL
+		id = 0
+	}
+	line
+	{
+		dot = (720, 300)
+		dot = (840, 180)
+		flags = PORTAL
+		id = 1
 	}
 }

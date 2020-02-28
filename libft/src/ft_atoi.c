@@ -20,20 +20,23 @@ int		ft_atoi(const char *str)
 
 	is_neg = 1;
 	nb = 0;
-	while (*str == '\t' || *str == '\v' || *str == '\n'
-			|| *str == '\r' || *str == '\f' || *str == ' ')
-		str++;
-	if (*str == '-' || *str == '+')
+	if (str)
 	{
-		if (*str == '-')
-			is_neg = -1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		nb *= 10;
-		nb += *str - 48;
-		str++;
+		while (*str == '\t' || *str == '\v' || *str == '\n'
+				|| *str == '\r' || *str == '\f' || *str == ' ')
+			str++;
+		if (*str == '-' || *str == '+')
+		{
+			if (*str == '-')
+				is_neg = -1;
+			str++;
+		}
+		while (*str >= '0' && *str <= '9')
+		{
+			nb *= 10;
+			nb += *str - 48;
+			str++;
+		}
 	}
 	return (nb * is_neg);
 }

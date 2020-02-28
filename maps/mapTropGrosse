@@ -1,0 +1,1543 @@
+Player
+{
+	posx = 0
+	posy = 0
+	width = 0
+	height = 0
+	sector = 1
+	velocity = 1
+}
+Sector
+{
+	name = sector
+	ceilHeight = 1
+	floorHeight = 0
+	line
+	{
+		dot = (6, 173)
+		dot = (91, 188)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (6, 173)
+		dot = (45, 393)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (25, 46)
+		dot = (6, 173)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (103, 82)
+		dot = (25, 46)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (103, 82)
+		dot = (186, 48)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (91, 188)
+		dot = (103, 82)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (25, 46)
+		dot = (91, 188)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (186, 48)
+		dot = (25, 46)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1085, 1081)
+		dot = (775, 1071)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1260, 740)
+		dot = (1212, 886)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1316, 578)
+		dot = (1260, 740)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1260, 740)
+		dot = (1181, 667)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1155, 800)
+		dot = (1260, 740)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1212, 886)
+		dot = (1155, 800)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1136, 992)
+		dot = (1212, 886)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1085, 1081)
+		dot = (1136, 992)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (861, 987)
+		dot = (1085, 1081)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (775, 1071)
+		dot = (861, 987)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (674, 1005)
+		dot = (775, 1071)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1136, 992)
+		dot = (861, 987)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1136, 992)
+		dot = (1027, 885)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1155, 800)
+		dot = (1136, 992)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1155, 800)
+		dot = (1027, 885)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1181, 667)
+		dot = (1155, 800)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1272, 210)
+		dot = (1365, 393)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1316, 578)
+		dot = (1181, 667)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1316, 578)
+		dot = (1365, 393)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1259, 449)
+		dot = (1316, 578)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1365, 393)
+		dot = (1259, 449)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1202, 347)
+		dot = (1365, 393)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1272, 210)
+		dot = (1202, 347)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1272, 210)
+		dot = (1176, 236)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1135, 26)
+		dot = (1272, 210)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1135, 26)
+		dot = (1051, 112)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (938, 52)
+		dot = (1135, 26)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (91, 188)
+		dot = (45, 393)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (91, 188)
+		dot = (186, 48)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (91, 188)
+		dot = (145, 286)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (283, 197)
+		dot = (91, 188)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (186, 48)
+		dot = (283, 197)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (186, 48)
+		dot = (310, 24)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (285, 113)
+		dot = (186, 48)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (285, 113)
+		dot = (310, 24)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (310, 24)
+		dot = (370, 104)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (511, 47)
+		dot = (310, 24)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (511, 47)
+		dot = (556, 134)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (788, 15)
+		dot = (511, 47)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (788, 15)
+		dot = (667, 84)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (788, 15)
+		dot = (808, 163)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (938, 52)
+		dot = (788, 15)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1051, 112)
+		dot = (938, 52)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1051, 112)
+		dot = (1176, 236)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1051, 112)
+		dot = (1028, 285)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1001, 204)
+		dot = (1051, 112)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (938, 52)
+		dot = (1001, 204)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (808, 163)
+		dot = (938, 52)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (199, 1016)
+		dot = (370, 1103)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (199, 1016)
+		dot = (165, 922)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (337, 956)
+		dot = (199, 1016)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (370, 1103)
+		dot = (337, 956)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (478, 1007)
+		dot = (370, 1103)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (478, 1007)
+		dot = (674, 1005)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (478, 1007)
+		dot = (337, 956)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (471, 904)
+		dot = (478, 1007)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (674, 1005)
+		dot = (471, 904)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (674, 1005)
+		dot = (861, 987)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (674, 1005)
+		dot = (587, 885)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (746, 834)
+		dot = (674, 1005)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (861, 987)
+		dot = (746, 834)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (861, 987)
+		dot = (942, 832)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1027, 885)
+		dot = (861, 987)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1181, 667)
+		dot = (1027, 885)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1259, 449)
+		dot = (1181, 667)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1259, 449)
+		dot = (1158, 523)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1202, 347)
+		dot = (1259, 449)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1202, 347)
+		dot = (1158, 523)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1158, 523)
+		dot = (1049, 452)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1181, 667)
+		dot = (1158, 523)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1072, 670)
+		dot = (1031, 751)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1031, 751)
+		dot = (1004, 612)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1027, 885)
+		dot = (942, 832)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1031, 751)
+		dot = (1027, 885)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1031, 751)
+		dot = (942, 832)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1181, 667)
+		dot = (1031, 751)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1072, 670)
+		dot = (1181, 667)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1072, 670)
+		dot = (1004, 612)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1049, 452)
+		dot = (1072, 670)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (808, 163)
+		dot = (667, 84)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (808, 163)
+		dot = (808, 268)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (808, 163)
+		dot = (728, 180)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (914, 248)
+		dot = (808, 163)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1001, 204)
+		dot = (914, 248)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1028, 285)
+		dot = (1001, 204)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1176, 236)
+		dot = (1028, 285)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1202, 347)
+		dot = (1176, 236)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1202, 347)
+		dot = (1028, 285)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1202, 347)
+		dot = (1049, 452)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (968, 370)
+		dot = (1202, 347)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1028, 285)
+		dot = (968, 370)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (914, 248)
+		dot = (1028, 285)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (808, 268)
+		dot = (914, 248)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (914, 248)
+		dot = (844, 409)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (968, 370)
+		dot = (914, 248)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1049, 452)
+		dot = (968, 370)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1004, 612)
+		dot = (1049, 452)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (833, 597)
+		dot = (968, 370)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1004, 612)
+		dot = (942, 832)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (942, 832)
+		dot = (840, 700)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (746, 834)
+		dot = (942, 832)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (840, 700)
+		dot = (746, 834)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (833, 597)
+		dot = (1004, 612)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (840, 700)
+		dot = (833, 597)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1004, 612)
+		dot = (840, 700)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (968, 370)
+		dot = (1004, 612)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (844, 409)
+		dot = (968, 370)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (808, 268)
+		dot = (844, 409)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (844, 409)
+		dot = (713, 365)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (833, 597)
+		dot = (844, 409)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (808, 268)
+		dot = (713, 365)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (728, 180)
+		dot = (808, 268)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (746, 834)
+		dot = (587, 885)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (746, 834)
+		dot = (833, 597)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (562, 781)
+		dot = (746, 834)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (587, 885)
+		dot = (562, 781)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (471, 904)
+		dot = (587, 885)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (337, 956)
+		dot = (471, 904)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (77, 753)
+		dot = (165, 922)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (337, 956)
+		dot = (165, 922)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (370, 798)
+		dot = (337, 956)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (471, 904)
+		dot = (370, 798)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (562, 781)
+		dot = (471, 904)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (165, 922)
+		dot = (370, 798)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (165, 717)
+		dot = (165, 922)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (77, 753)
+		dot = (165, 717)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (68, 658)
+		dot = (77, 753)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (68, 658)
+		dot = (45, 393)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (68, 658)
+		dot = (165, 717)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (132, 545)
+		dot = (68, 658)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (45, 393)
+		dot = (132, 545)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (145, 286)
+		dot = (45, 393)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (145, 286)
+		dot = (132, 545)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (283, 197)
+		dot = (145, 286)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (285, 113)
+		dot = (283, 197)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (370, 104)
+		dot = (285, 113)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (370, 104)
+		dot = (511, 47)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (667, 84)
+		dot = (511, 47)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (667, 84)
+		dot = (728, 180)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (556, 134)
+		dot = (667, 84)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (283, 197)
+		dot = (132, 545)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (833, 597)
+		dot = (562, 781)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (833, 597)
+		dot = (680, 620)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (713, 365)
+		dot = (833, 597)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (728, 180)
+		dot = (713, 365)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (556, 134)
+		dot = (728, 180)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (370, 104)
+		dot = (556, 134)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (556, 134)
+		dot = (610, 206)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (471, 185)
+		dot = (556, 134)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (370, 104)
+		dot = (471, 185)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (283, 197)
+		dot = (370, 104)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (523, 649)
+		dot = (562, 781)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (477, 462)
+		dot = (294, 337)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (583, 481)
+		dot = (477, 462)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (534, 355)
+		dot = (713, 365)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (471, 185)
+		dot = (534, 355)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (283, 197)
+		dot = (471, 185)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (294, 337)
+		dot = (283, 197)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (294, 337)
+		dot = (132, 545)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (680, 620)
+		dot = (713, 365)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (562, 781)
+		dot = (680, 620)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (562, 781)
+		dot = (370, 798)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (680, 620)
+		dot = (523, 649)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (583, 481)
+		dot = (680, 620)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (294, 337)
+		dot = (291, 515)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (477, 462)
+		dot = (534, 355)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (583, 481)
+		dot = (523, 649)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (370, 798)
+		dot = (523, 649)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (165, 717)
+		dot = (370, 798)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (165, 717)
+		dot = (132, 545)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (291, 515)
+		dot = (132, 545)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (477, 462)
+		dot = (523, 649)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (291, 515)
+		dot = (477, 462)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (165, 717)
+		dot = (291, 515)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (523, 649)
+		dot = (165, 717)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (291, 515)
+		dot = (523, 649)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (610, 206)
+		dot = (713, 365)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (610, 206)
+		dot = (471, 185)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (534, 355)
+		dot = (610, 206)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (583, 481)
+		dot = (713, 365)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (534, 355)
+		dot = (583, 481)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (294, 337)
+		dot = (471, 185)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (534, 355)
+		dot = (294, 337)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+}

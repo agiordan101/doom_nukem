@@ -18,8 +18,11 @@ void	ft_2dstrdel(char ***tab)
 	int		i;
 
 	i = 0;
-	while ((*tab)[i])
-		free((*tab)[i++]);
-	free(*tab);
-	*tab = NULL;
+	if (*tab)
+	{
+		while ((*tab)[i])
+			free((*tab)[i++]);
+		free(*tab);
+		*tab = NULL;
+	}
 }

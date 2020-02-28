@@ -1,0 +1,166 @@
+Player
+{
+	posx = 200
+	posy = 200
+	posz = 140
+	dir = -90
+	width = 30
+	height = 90
+	velocity = 10
+}
+Mob
+{	
+	mob0
+	{	
+		type = 1
+		posx = 200
+		posy = 200
+		posz = 140
+		dir = -90
+		width = 30
+		height = 90
+		velocity = 10
+		health = 100
+	}
+	mob = 1
+	{	
+		type = 1
+		posx = 200
+		posy = 200
+		posz = 140
+		dir = -90
+		width = 30
+		height = 90
+		velocity = 10
+		health = 50
+	}
+	mob = 2
+	{
+		type = 3
+		posx = 200
+		posy = 200
+		posz = 140
+		dir = -90
+		width = 30
+		height = 90
+		velocity = 10
+		health = 50
+	}
+	mob = 3
+	{
+		type = 2
+		posx = 200
+		posy = 200
+		posz = 140
+		dir = -90
+		width = 30
+		height = 90
+		velocity = 10
+		health = 75
+	}
+}
+
+
+/* Salle du bas */
+Object
+{
+	posx = 100
+	posy = 100
+	posz = 100
+	width = 100
+	height = 100
+	texture = Brique.png
+}
+Polygon
+{
+	dot = x:100, y:650, z:200
+	dot = x:100, y:150, z:200
+	dot = x:100, y:150, z:50
+	dot = x:100, y:650, z:50
+	texture = Brique.png
+}
+Polygon
+{
+	dot = x:600, y:150, z:200
+	dot = x:600, y:650, z:200
+	dot = x:600, y:650, z:50
+	dot = x:600, y:150, z:50
+	texture = Brique.png
+}
+Polygon
+{
+	dot = x:100, y:150, z:200
+	dot = x:600, y:150, z:200
+	dot = x:600, y:150, z:50
+	dot = x:100, y:150, z:50
+	texture = Elephantride.png
+}
+Polygon
+{
+	dot = x:100, y:650, z:200
+	dot = x:600, y:650, z:200
+	dot = x:600, y:650, z:50
+	dot = x:100, y:650, z:50
+	texture = Vitre.png
+}
+Polygon
+{
+	dot = x:100, y:650, z:50
+	dot = x:100, y:150, z:50
+	dot = x:600, y:150, z:50
+	dot = x:600, y:650, z:50
+	texture = Plafond.png
+}
+Polygon								//Plafond
+{
+	dot = x:100, y:1150, z:200
+	dot = x:100, y:150, z:200
+	dot = x:600, y:150, z:200
+	dot = x:600, y:1150, z:200
+	texture = Plafond.png
+}
+
+
+
+/* Salle du bas */
+
+Polygon
+{
+	dot = x:100, y:650, z:200
+	dot = x:100, y:1150, z:200
+	dot = x:100, y:1150, z:0
+	dot = x:100, y:650, z:0
+	texture = Brique.png
+}
+Polygon
+{
+	dot = x:100, y:1150, z:200
+	dot = x:600, y:1150, z:200
+	dot = x:600, y:1150, z:0
+	dot = x:100, y:1150, z:0
+	texture = Elephantride.png
+}
+Polygon
+{
+	dot = x:600, y:1150, z:200
+	dot = x:600, y:650, z:200
+	dot = x:600, y:650, z:0
+	dot = x:600, y:1150, z:0
+	texture = Brique.png
+}
+Polygon
+{
+	dot = x:100, y:650, z:0
+	dot = x:100, y:1150, z:0
+	dot = x:600, y:1150, z:0
+	dot = x:600, y:650, z:0
+	texture = Plafond.png
+}
+Polygon
+{
+	dot = x:100, y:650, z:0
+	dot = x:600, y:650, z:0
+	dot = x:600, y:650, z:50
+	dot = x:100, y:650, z:50
+	texture = Brique.png
+}

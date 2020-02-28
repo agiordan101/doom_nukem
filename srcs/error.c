@@ -1,5 +1,14 @@
 #include "doom_nukem.h"
 
+int		ret_num_error(const char *error_msg, int i)
+{
+	ft_putstr(error_msg);
+	ft_putchar('\t');
+	ft_putnbr(i);
+	ft_putchar('\n');
+	return (0);
+}
+
 int		ret_error(const char *error_msg)
 {
 	ft_putendl_fd(error_msg, 2);

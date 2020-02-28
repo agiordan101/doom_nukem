@@ -3,15 +3,20 @@
 /*                                                              /             */
 /*   ft_abs.c                                         .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/08 17:21:15 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/12 20:35:20 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/31 17:23:39 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 double		ft_abs(double n)
 {
-	return (n < 0.0) ? -n : n;
+	return ((n < 0.0) ? -n : n);
+}
+
+int			ft_intabs(int value)
+{
+	return ((value < 0) ? -value : value);
 }

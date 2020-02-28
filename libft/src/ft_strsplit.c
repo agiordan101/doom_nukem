@@ -65,14 +65,12 @@ char		**ft_strsplit(const char *s, char c)
 {
 	char	**split;
 	int		is;
-	int		i;
 
 	if (!s || !c)
 		return (NULL);
 	if (!(split = (char**)malloc(sizeof(split) * ft_countword(s, c) + 1)))
 		return (NULL);
 	is = 0;
-	i = 0;
 	while (*s)
 	{
 		if (*s == c && *s)

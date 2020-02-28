@@ -1,0 +1,107 @@
+Player
+{
+	posx = 662
+	posy = 218
+	width = 50
+	height = 50
+	sector = 0
+	velocity = 1
+}
+Sector
+{
+	name = 0
+	ceilHeight = 1
+	floorHeight = 0
+	line
+	{
+		dot = (640, 386)
+		dot = (639, 487)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (640, 386)
+		dot = (690, 325)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (607, 310)
+		dot = (640, 386)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+}
+Sector
+{
+	name = 1
+	ceilHeight = 1
+	floorHeight = 0
+	line
+	{
+		dot = (811, 459)
+		dot = (639, 487)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (690, 325)
+		dot = (811, 459)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (690, 325)
+		dot = (639, 487)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+}
+Sector
+{
+	name = 2
+	ceilHeight = 1
+	floorHeight = 0
+	line
+	{
+		dot = (621, 640)
+		dot = (621, 640)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (639, 487)
+		dot = (607, 310)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (474, 459)
+		dot = (639, 487)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (607, 310)
+		dot = (474, 459)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+}

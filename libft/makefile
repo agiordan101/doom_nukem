@@ -1,21 +1,22 @@
 # **************************************************************************** #
-#                                                           LE - /             #
-#                                                               /              #
-#    Makefile                                         .::    .:/ .      .::    #
-#                                                  +:+:+   +:    +:  +:+:+     #
-#    By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+      #
-#                                                  #+#   #+    #+    #+#       #
-#    Created: 2018/10/02 16:01:28 by gmonacho     #+#   ##    ##    #+#        #
-#    Updated: 2019/02/07 17:11:26 by gmonacho    ###    #+. /#+    ###.fr      #
-#                                                          /                   #
-#                                                         /                    #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: widrye <widrye@student.le-101.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/10/02 16:01:28 by gmonacho          #+#    #+#              #
+#    Updated: 2020/02/27 19:20:25 by widrye           ###   ########lyon.fr    #
+#                                                                              #
 # **************************************************************************** #
+
 
 NAME = libft.a
 
 CC = gcc
 
 SRCS = ./src/ft_atoi.c\
+	./src/ft_atof.c\
 	./src/ft_abs.c\
 	./src/ft_bzero.c\
 	./src/ft_isalnum.c\
@@ -87,7 +88,16 @@ SRCS = ./src/ft_atoi.c\
 	./src/ft_countnumbers.c \
 	./src/ft_round.c \
 	./src/ft_intdel.c \
-	./src/ft_2dstrdel.c
+	./src/ft_2dstrdel.c \
+	./src/ft_2dputendl.c \
+	./src/ft_2dstrpushback.c \
+	./src/ft_2dstrlen.c \
+	./src/ft_strrev.c \
+	./src/ft_count_words.c \
+	./src/ft_create_elem.c \
+	./src/ft_lst_pb.c \
+	./src/ft_free_list.c \
+	./src/ft_content_already_inlist.c
 
 HEADER = ./includes/libft.h
 

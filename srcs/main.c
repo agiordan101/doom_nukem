@@ -1,74 +1,92 @@
-#include <fcntl.h>
 #include "doom_nukem.h"
 
-/*static int	init_equations(t_map *map)
-{
-	t_sector	*sector;
-	t_linedef	*line;
-	sector = map->sectors;
-	while (sector)
-	{
-		line = sector->lines;
-		while (line)
-		{
-			line->equation.a = (line->p2.y - line->p1.y) /\
-								(line->p2.x - line->p1.x);
-			line->equation.b = line->p1.y - line->equation.a * line->p1.x;
-			line = line->next;
-		}
-		sector = sector->next;
-	}
-	return (SUCCESS);
-}*/
+/*
+**	A faire :
+**
+**	Elements de decors
+**	Tenter de casser le parsing
+**	OpenAL !!!! POUR LE SON
+**	Clean code/fichier inutiles
+**	Gerer les leaks
+**	Norme all
+**
+*/
+//Enlever les wildcards
 
-static int	init(t_win *win, t_map *map, t_player *player)
-{
-	t_linedef	*tmp;
+//DEG fault editor -> game
+/////ABSOLUMENT faire une fonction qui teste si les poly sont des parrallelogramme
 
-	//init_equations(map);
-	win->w = 1500;
-	win->h = 800;
-	player->hitbox = 10;
-	player->pos = (t_dot){win->w / 2, win->h / 2 - 100};
-	player->sector = 0;
-	player->dir = M_PI_2;
-	player->const_vel = 5;
-	add_sector(&map->sectors, new_sector());
-	tmp = new_linedef((t_line){(t_dot){0, 0},\
-										(t_dot){win->w, win->h}},\
-										NULL, 0);
-	add_linedef(&map->sectors->lines, tmp);
-	tmp = new_linedef((t_line){(t_dot){0, win->h},\
-										(t_dot){win->w, 0}},\
-										NULL, 0);
-	add_linedef(&map->sectors->lines, tmp);
-	return (1);
+static int			init(t_win *win, t_map *map, t_player *player)
+{
+	printf("Debut init\n");
+	if (init_win_player(win, player))
+		return (1);
+	init_polygone(map->polys);
+	create_poly_save(map);
+	if (init_threads(win, map, player))
+		return (1);
+	// save_lights(map);
+	printf("Fin init\n");
+	return (0);
 }
 
-int     main(int argc, char **argv)
+int					main(int argc, char **argv)
 {
-    int     fd;
-    int     fd1;
-    t_win   win;
-    t_map   map;
+	int				fd;
+	int				fd1;
+	int				ret;
+	t_win			win;
+	t_map			map;
+	SDL_bool		loop;
+	SDL_DisplayMode	screen;
 
-
-    if (!argc)
-        argc = 0;
-    if ((((fd = open(argv[1] , O_RDONLY)) <= 0) || ((fd1 = open(argv[1], O_RDONLY)) <= 0)))
-        return (ret_error("open error"));
-    ft_data_storing(fd, fd1);
-	if (init(&win, &map, &(map.player)) < 0)
-		return (ret_error("init error"));
-    if (SDL_Init(SDL_INIT_VIDEO) < 0 || TTF_Init() == -1)
-        return (ret_error(SDL_GetError()));
-    if (!(create_window(&win, "doom_nukem", (SDL_Rect){200, 200, 1500, 800}, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE)))
-        return (0);
-    SDL_SetRenderDrawColor(win.rend, 255, 255, 255, 255);
-    //editor_loop(&win);
-	game_loop(&win, &map);
-    SDL_DestroyWindow(win.ptr);
-    SDL_DestroyRenderer(win.rend);
-    SDL_Quit();
-    return (0);
+	if (argc == 1 || argc == 2)
+	{
+		win.w = WIDTH;
+		win.h = HEIGHT;
+		win.map = &map;
+		if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) == -1 || TTF_Init() == -1)
+			return (ret_error(SDL_GetError()));
+		if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG)
+			return (ret_error(SDL_GetError()));
+		if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024) == -1)
+			return (ret_error(SDL_GetError()));
+		if ((Mix_Init(MIX_INIT_MP3) & MIX_INIT_MP3) != MIX_INIT_MP3)
+			return (ret_error(SDL_GetError()));
+		map.save.ifPars = 0;
+		if (SDL_GetDesktopDisplayMode(0, &screen) != 0)
+		{
+			SDL_Log("SDL_GetDesktopDisplayMode failed: %s", SDL_GetError());
+			return (1);
+		}
+		if (!create_window(&win, "doom_nukem", (SDL_Rect){screen.w / 2 - win.w / 2,\
+															screen.h / 2 - win.h / 2,\
+								win.w, win.h}, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE))
+			return (1);
+		loop = SDL_TRUE;
+		if (!init_music_timer(&map, &(win.music)))
+		{
+			ft_putendl("init_music failed");
+			return (4);
+		}
+		if (argc == 1)
+			editor_loop(&win, &map);
+		else
+		{
+			if ((((fd = open(argv[1], O_RDONLY)) <= 0) ||\
+				((fd1 = open(argv[1], O_RDONLY)) <= 0)))
+				return (ret_error("open error"));
+			if (!(map.polys = ft_data_storing(fd, fd1, &map, &win))) // FREE SDL, FREE FD, FREE MUSIC
+				return (1);	//LEAKS T'AS UN GROS SEXE ALEXANDRE
+			map.gravity = map.player.const_vel / 2;
+			if ((ret = init(&win, &map, &(map.player))))
+				return (ret_num_error("Init error", ret));
+			main_menu(&win, &map);
+		}
+		SDL_DestroyWindow(win.ptr);
+		SDL_DestroyRenderer(win.rend);
+		SDL_Quit();
+	}
+	argv = NULL;
+	return (0);
 }

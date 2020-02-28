@@ -1,13 +1,16 @@
 #include "doom_nukem.h"
 
+/*
+**	Angle e [0, pi]
+*/
+
 void		add_linedef(t_linedef **lines, t_linedef *new_linedef)
 {
 	new_linedef->next = *lines;
 	*lines = new_linedef;
 }
 
-
-t_linedef	*new_linedef(t_line line, SDL_Texture *texture, Uint32 flags)
+t_linedef	*new_linedef(t_line line, SDL_Surface *texture, Uint32 flags)
 {
 	t_linedef	*newline;
 
@@ -15,24 +18,39 @@ t_linedef	*new_linedef(t_line line, SDL_Texture *texture, Uint32 flags)
 		return (ret_null_perror("lines allocation failed in new_linedef"));
 	newline->p1 = line.p1;
 	newline->p2 = line.p2;
-	if (line.p2.x - line.p1.x)
-	{
-		newline->isequation = 1;
-		newline->equation.a = (line.p2.y - line.p1.y) / (double)(line.p2.x - line.p1.x);
-		newline->equation.b = line.p1.y - newline->equation.a * line.p1.x;
-		newline->angle = atan(newline->equation.a);
-	}
-	else
-	{
-		newline->isequation = 0;
-		newline->equation.a = line.p1.x;
-		newline->angle = M_PI_2;
-	}
-	newline->portal = 0;
 	newline->texture = texture;
+	newline->side = SIDE_RIGHT;
 	newline->flags = flags;
-	newline->next = NULL;
+	newline->id = 0;
+	// init_equation(newline);
 	return (newline);
+}
+
+void		free_linedef(t_linedef *linedef)
+{
+	if (linedef)
+	{
+		ft_strdel(&linedef->name);
+		if (linedef->texture)
+			SDL_FreeSurface(linedef->texture);
+		free(linedef);
+	}
+	linedef = NULL; 
+}
+
+void		free_linedefs(t_linedef **lines)
+{
+	t_linedef	*l;
+	t_linedef	*tmp_next;
+
+	l = *lines;
+	while (l)
+	{
+		tmp_next = l->next;
+		free_linedef(l);
+		l = tmp_next;
+	}
+	*lines = NULL;
 }
 
 t_linedef	*new_void_linedef(void)
@@ -44,17 +62,30 @@ t_linedef	*new_void_linedef(void)
 	return (line);
 }
 
-int			get_nb_linedef(t_linedef *lines)
+int			get_nb_linedef(t_linedef *lines, Uint32 flags)
 {
-	t_linedef 	*tmp;
+	t_linedef	*tmp;
 	int			nb;
 
 	nb = 0;
 	tmp = lines;
 	while (tmp)
 	{
-		nb++;
+		if (tmp->flags & flags)
+			nb++;
 		tmp = tmp->next;
 	}
 	return (nb);
+}
+
+void		add_linedef_flags(t_linedef **lines, Uint32 flags)
+{
+	t_linedef	*l;
+
+	l = *lines;
+	while (l)
+	{
+		l->flags |= flags;
+		l = l->next;
+	}
 }

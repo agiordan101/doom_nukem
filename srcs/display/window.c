@@ -1,4 +1,5 @@
 #include "doom_nukem.h"
+#include "ui_error.h"
 
 int 			create_window(t_win *win, const char *title, SDL_Rect rect, Uint32 flags)
 {
@@ -6,11 +7,31 @@ int 			create_window(t_win *win, const char *title, SDL_Rect rect, Uint32 flags)
 		return (ret_error(SDL_GetError()));
 	win->w = rect.w;
 	win->h = rect.h;
-	win->mouse = mouse_refresh();
+	printf("w = %d| h = %d\n", win->w, win->h);
 	win->frames = NULL;
-	if (!(win->rend = SDL_CreateRenderer(win->ptr, 0, SDL_RENDERER_SOFTWARE)))
+	win->text_entry = NULL;
+	if (!(win->rend = SDL_CreateRenderer(win->ptr, 0, SDL_RENDERER_SOFTWARE)) ||\
+		!(win->rend_texture = SDL_CreateTexture(win->rend, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, win->w, win->h)))
 		return (ret_error(SDL_GetError()));
 	SDL_SetRenderDrawBlendMode(win->rend, SDL_BLENDMODE_BLEND);
+	if (!(win->winui = (t_winui*)ft_memalloc(sizeof(t_winui))))
+		return (ui_ret_error("create_window", "win->winui allocation failed", 0));
+	win->winui->ptr = win->ptr;
+	win->winui->rend = win->rend;
+	SDL_PollEvent(&win->winui->event);
+	ui_event_update_mouse(&win->winui->mouse);
+	win->winui->ui.frames = NULL;
+	win->winui->ui.on_mouse_button = NULL;
+	win->winui->ui.clicked_button = NULL;
+	win->winui->ui.button_font = NULL;
+	win->winui->ui.button_text_color = (SDL_Color){255, 255, 255, 255};
+	win->winui->ui.button_text_ratio = 0.7;
+	win->winui->ui.cursor_position = 0;
+	win->winui->ui.delay_text_entry = 80;
+	win->winui->ui.delay_text_del = 30;
+	win->winui->ui.last_char = '\0';
+	win->winui->ui.cursor_color = (SDL_Color){255, 255, 255, 255};
+	win->winui->ui.textures = NULL;
 	return (1);
 }
 
