@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/17 00:03:48 by gal               #+#    #+#             */
+/*   Updated: 2020/05/17 00:03:48 by gal              ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "doom_nukem.h"
 
 int		ret_num_error(const char *error_msg, int i)
@@ -27,7 +39,7 @@ int		ret_perror(const char *error_msg)
 	return (0);
 }
 
-void    *ret_null_perror(const char *error_msg)
+void	*ret_null_perror(const char *error_msg)
 {
 	perror(error_msg);
 	return (NULL);

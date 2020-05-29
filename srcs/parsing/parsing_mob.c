@@ -1,33 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing_mob.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/03/10 18:05:46 by aducimet          #+#    #+#             */
+/*   Updated: 2020/05/24 12:25:39 by gal              ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "doom_nukem.h"
 
-void    set_mobs_dots_rotz_only(t_mob *mob)
+void	set_mobs_dots_rotz_only(t_mob *mob)
 {
-    mob->poly->dots_rotz_only[0].x = mob->pos.x - mob->width_2;
-    mob->poly->dots_rotz_only[0].y = mob->pos.y;
-    mob->poly->dots_rotz_only[0].z = mob->pos.z - mob->height_2;
-    mob->poly->dots_rotz_only[1].x = mob->pos.x + mob->width_2;
-    mob->poly->dots_rotz_only[1].y = mob->pos.y;
-    mob->poly->dots_rotz_only[1].z = mob->pos.z - mob->height_2;
-    mob->poly->dots_rotz_only[2].x = mob->pos.x + mob->width_2;
-    mob->poly->dots_rotz_only[2].y = mob->pos.y;
-    mob->poly->dots_rotz_only[2].z = mob->pos.z + mob->height_2;
-    mob->poly->dots_rotz_only[3].x = mob->pos.x - mob->width_2;
-    mob->poly->dots_rotz_only[3].y = mob->pos.y;
-    mob->poly->dots_rotz_only[3].z = mob->pos.z + mob->height_2;
+	mob->poly->dots_rotz_only[0].x = mob->pos.x - mob->width_2;
+	mob->poly->dots_rotz_only[0].y = mob->pos.y;
+	mob->poly->dots_rotz_only[0].z = mob->pos.z - mob->height_2;
+	mob->poly->dots_rotz_only[1].x = mob->pos.x + mob->width_2;
+	mob->poly->dots_rotz_only[1].y = mob->pos.y;
+	mob->poly->dots_rotz_only[1].z = mob->pos.z - mob->height_2;
+	mob->poly->dots_rotz_only[2].x = mob->pos.x + mob->width_2;
+	mob->poly->dots_rotz_only[2].y = mob->pos.y;
+	mob->poly->dots_rotz_only[2].z = mob->pos.z + mob->height_2;
+	mob->poly->dots_rotz_only[3].x = mob->pos.x - mob->width_2;
+	mob->poly->dots_rotz_only[3].y = mob->pos.y;
+	mob->poly->dots_rotz_only[3].z = mob->pos.z + mob->height_2;
 }
 
-void		add_mob(t_mob **mob)
+int		add_mob(t_mob **mob)
 {
 	t_mob	*new_mob;
 
 	if (!(new_mob = (t_mob *)ft_memalloc(sizeof(t_mob))))
-		ft_putendl("error malloc in parsing_mob.c l.24");
+		return (-1);
+	new_mob->light_coef = 1;
 	new_mob->next = *mob;
 	new_mob->alive = 1;
 	*mob = new_mob;
+	return (0);
 }
 
-void		add_existing_mob(t_mob **mob, t_mob *new_mob)
+void	add_existing_mob(t_mob **mob, t_mob *new_mob)
 {
 	if (new_mob)
 	{
@@ -36,20 +50,23 @@ void		add_existing_mob(t_mob **mob, t_mob *new_mob)
 	}
 }
 
-void		add_poly_mob(t_mob **mob)
+int		add_poly_mob(t_mob **mob)
 {
-    (*mob)->poly = (t_poly *)ft_memalloc(sizeof(t_poly));
-    if ((*mob)->poly != NULL)
+	if (!((*mob)->poly = (t_poly *)ft_memalloc(sizeof(t_poly))))
+		return (-1);
+	else
 	{
-        set_mobs_dots_rotz_only(*mob);
+		set_mobs_dots_rotz_only(*mob);
 		(*mob)->poly->mob = *mob;
 		(*mob)->poly->object = NULL;
 	}
+	return (0);
 }
 
-void		fill_mob_data(t_mob **mob, char **tab, int i)
+int		fill_mob_data(t_mob **mob, char **tab, int i)
 {
-	add_mob(mob);
+	if (add_mob(mob) == -1)
+		return (-1);
 	while (ft_strchr(tab[i], '}') == NULL)
 	{
 		fill_mob_data_norm(mob, tab[i]);
@@ -67,11 +84,9 @@ void		fill_mob_data(t_mob **mob, char **tab, int i)
 			(*mob)->vel = ft_atoi(ft_strrchr(tab[i], '=') + 1);
 		if (ft_strstr(tab[i], "health = "))
 			(*mob)->health = ft_atoi(ft_strrchr(tab[i], '=') + 1);
-		if (ft_strstr(tab[i], "damage = "))
-			(*mob)->damage = ft_atoi(ft_strrchr(tab[i], '=') + 1);
-		if (ft_strstr(tab[i], "texture = "))
-			(*mob)->texture = ft_strdup(ft_strrchr(tab[i], '=') + 2);
+		if (ft_strstr(tab[i], "agro_dist = "))
+			(*mob)->agro_dist = ft_atoi(ft_strrchr(tab[i], '=') + 1);
 		i++;
 	}
-	add_poly_mob(mob);
+	return (add_poly_mob(mob));
 }

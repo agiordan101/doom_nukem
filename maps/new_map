@@ -1,403 +1,42 @@
+
+###########
 Player
 {
 	posx = 0
 	posy = 0
 	posz = 0
 	dir = 0
-	width = 30
-	height = 50
-	velocity = 5
+	width = 40
+	height = 40
+	velocity = 2
 }
-Object
+Sphere
 {
-	type = BOX
 	posx = 0
 	posy = 0
 	posz = 0
-	width = 30
-	height = 30
-	light = 100
-	texture = Elephantride.png
-}
-Object
-{
-	type = BOX
-	posx = 0
-	posy = 0
-	posz = 0
-	width = 30
-	height = 30
-	light = 100
-	texture = Pq.png
-}
-Object
-{
-	type = BOX
-	posx = 0
-	posy = 0
-	posz = 0
-	width = 30
-	height = 30
-	light = 100
-	texture = 150x150.png
-}
-Object
-{
-	type = BOX
-	posx = 0
-	posy = 0
-	posz = 0
-	width = 30
-	height = 30
-	light = 100
-	texture = 150x150.png
-}
-Object
-{
-	type = BOX
-	posx = 0
-	posy = 0
-	posz = 0
-	width = 30
-	height = 30
-	light = 25
-	texture = 150x150.png
-}
-Object
-{
-	type = GRAVITY_INV
-	posx = 0
-	posy = 0
-	posz = 0
-	width = 30
-	height = 30
-	light = 75
-	texture = 150x150.png
-}
-Object
-{
-	type = ARMOR
-	posx = 0
-	posy = 0
-	posz = 0
-	width = 30
-	height = 30
-	light = 100
-	texture = shieldPotion.png
-}
-Object
-{
-	type = HEAL
-	posx = 0
-	posy = 0
-	posz = 0
-	width = 30
-	height = 30
-	light = 50
-	texture = healthPotion.png
-}
-Object
-{
-	type = healthPotion.png
-	posx = 0
-	posy = 0
-	posz = 0
-	width = 30
-	height = 30
-	light = 55
-	texture = pq.png
+	radius = 10000
+	texture = desert.jpg
 }
 Mob
 {
-	posx = 400
-	posy = 650
-	posz = 150
-	height = 50
+	posx = 56
+	posy = 335
+	posz = 5
+	height = 30
 	width = 30
 	damage = 1
 	dir = -90
-	velocity = 2
-	light = 0
-	texture = Mario_Ghost.png
+	velocity = 1
+	agro_dist = 300
+	texture = brique.png
 }
 Polygon
 {
-	dot = x:103 y:483 z:0
-	dot = x:-231 y:303 z:0
-	dot = x:10 y:-144 z:0
-	dot = x:344 y:35 z:0
+	dot = x:-69 y:-69 z:-100
+	dot = x:163 y:-70 z:-100
+	dot = x:164 y:205 z:-100
+	dot = x:-67 y:206 z:-100
 	light = 100
-	texture = Brique.png
+	texture = rique.png
 }
-Polygon
-{
-	dot = x:-153 y:45 z:0
-	dot = x:417 y:-288 z:0
-	dot = x:672 y:151 z:0
-	dot = x:103 y:483 z:0
-	light = 100
-	texture = Brique.png
-}
-Polygon
-{
-	dot = x:-153 y:45 z:0
-	dot = x:293 y:-78 z:0
-	dot = x:202 y:-403 z:0
-	dot = x:-242 y:-281 z:0
-	light = 100
-	texture = Brique.png
-}
-Polygon
-{
-	dot = x:-231 y:303 z:-100
-	dot = x:421 y:299 z:-100
-	dot = x:417 y:-288 z:-100
-	dot = x:-234 y:-284 z:-100
-	light = 100
-	texture = Brique.png
-}
-Polygon
-{
-	dot = x:-234 y:-284 z:100
-	dot = x:-231 y:303 z:100
-	dot = x:-231 y:303 z:-100
-	dot = x:-234 y:-284 z:-100
-	light = 100
-	texture = Brique.png
-}
-Polygon
-{
-	dot = x:-234 y:-284 z:100
-	dot = x:417 y:-288 z:100
-	dot = x:417 y:-288 z:-100
-	dot = x:-234 y:-284 z:-100
-	light = 100
-	texture = Brique.png
-}
-Polygon
-{
-	dot = x:417 y:-288 z:100
-	dot = x:421 y:299 z:100
-	dot = x:421 y:299 z:-100
-	dot = x:417 y:-288 z:-100
-	light = 100
-	texture = Brique.png
-}
-Polygon
-{
-	dot = x:421 y:299 z:100
-	dot = x:-231 y:303 z:100
-	dot = x:-231 y:303 z:-100
-	dot = x:421 y:299 z:-100
-	light = 100
-	texture = Brique.png
-}
-Polygon
-{
-	dot = x:-234 y:-284 z:100
-	dot = x:417 y:-288 z:100
-	dot = x:420 y:298 z:100
-	dot = x:-230 y:302 z:100
-	light = 100
-	texture = Pq.png
-}
-Polygon
-{
-	dot = x:323 y:-78 z:15
-	dot = x:293 y:-78 z:15
-	dot = x:293 y:-78 z:-15
-	dot = x:323 y:-78 z:-15
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:323 y:-108 z:15
-	dot = x:323 y:-78 z:15
-	dot = x:323 y:-78 z:-15
-	dot = x:323 y:-108 z:-15
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:323 y:-108 z:15
-	dot = x:323 y:-78 z:15
-	dot = x:293 y:-78 z:15
-	dot = x:293 y:-108 z:15
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:293 y:-78 z:15
-	dot = x:293 y:-108 z:15
-	dot = x:293 y:-108 z:-15
-	dot = x:293 y:-78 z:-15
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:293 y:-108 z:-15
-	dot = x:293 y:-78 z:-15
-	dot = x:323 y:-78 z:-15
-	dot = x:323 y:-108 z:-15
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:715 z:85
-	dot = x:185 y:715 z:85
-	dot = x:185 y:715 z:55
-	dot = x:215 y:715 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:685 z:85
-	dot = x:215 y:715 z:85
-	dot = x:215 y:715 z:55
-	dot = x:215 y:685 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:685 z:85
-	dot = x:215 y:715 z:85
-	dot = x:185 y:715 z:85
-	dot = x:185 y:685 z:85
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:185 y:715 z:85
-	dot = x:185 y:685 z:85
-	dot = x:185 y:685 z:55
-	dot = x:185 y:715 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:185 y:685 z:55
-	dot = x:185 y:715 z:55
-	dot = x:215 y:715 z:55
-	dot = x:215 y:685 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:715 z:85
-	dot = x:185 y:715 z:85
-	dot = x:185 y:715 z:55
-	dot = x:215 y:715 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:685 z:85
-	dot = x:215 y:715 z:85
-	dot = x:215 y:715 z:55
-	dot = x:215 y:685 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:685 z:85
-	dot = x:215 y:715 z:85
-	dot = x:185 y:715 z:85
-	dot = x:185 y:685 z:85
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:185 y:715 z:85
-	dot = x:185 y:685 z:85
-	dot = x:185 y:685 z:55
-	dot = x:185 y:715 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:185 y:685 z:55
-	dot = x:185 y:715 z:55
-	dot = x:215 y:715 z:55
-	dot = x:215 y:685 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:715 z:85
-	dot = x:185 y:715 z:85
-	dot = x:185 y:715 z:55
-	dot = x:215 y:715 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:685 z:85
-	dot = x:215 y:715 z:85
-	dot = x:215 y:715 z:55
-	dot = x:215 y:685 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:685 z:85
-	dot = x:215 y:715 z:85
-	dot = x:185 y:715 z:85
-	dot = x:185 y:685 z:85
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:185 y:715 z:85
-	dot = x:185 y:685 z:85
-	dot = x:185 y:685 z:55
-	dot = x:185 y:715 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:185 y:685 z:55
-	dot = x:185 y:715 z:55
-	dot = x:215 y:715 z:55
-	dot = x:215 y:685 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:715 z:85
-	dot = x:185 y:715 z:85
-	dot = x:185 y:715 z:55
-	dot = x:215 y:715 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:685 z:85
-	dot = x:215 y:715 z:85
-	dot = x:215 y:715 z:55
-	dot = x:215 y:685 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:215 y:685 z:85
-	dot = x:215 y:715 z:85
-	dot = x:185 y:715 z:85
-	dot = x:185 y:685 z:85
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:185 y:715 z:85
-	dot = x:185 y:685 z:85
-	dot = x:185 y:685 z:55
-	dot = x:185 y:715 z:55
-	light = 100
-	texture = }
-Polygon
-{
-	dot = x:185 y:685 z:55
-	dot = x:185 y:715 z:55
-	dot = x:215 y:715 z:55
-	dot = x:215 y:685 z:55
-	light = 100
-	texture = }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ed_convert_value.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:20:02 by gal               #+#    #+#             */
+/*   Updated: 2020/05/06 14:20:03 by gal              ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "doom_nukem.h"
 
 t_line		ed_get_display_line(const t_map *map, t_dot p1, t_dot p2)
@@ -24,6 +36,7 @@ int			ed_get_map_x(const t_map *map, int n)
 {
 	return (n / map->editor.unit + map->editor.pos.x);
 }
+
 int			ed_get_map_y(const t_map *map, int n)
 {
 	return (n / map->editor.unit + map->editor.pos.y);

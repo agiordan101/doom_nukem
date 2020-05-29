@@ -1,19 +1,23 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_texture.c                                     .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 17:36:27 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 17:36:29 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_texture.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:17:34 by gal               #+#    #+#             */
+/*   Updated: 2020/05/28 16:49:21 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "ui_texture.h"
-#include "SDL.h"
+# ifdef __linux__
+#  include "SDL2/SDL.h"
+#  include "SDL2/SDL_image.h"
+# else
+#  include "SDL.h"
 #include "SDL_image.h"
+# endif
 #include "ui_error.h"
 
 SDL_Texture			*ui_load_image(SDL_Renderer *rend, const char *file)
@@ -22,7 +26,10 @@ SDL_Texture			*ui_load_image(SDL_Renderer *rend, const char *file)
 	SDL_Texture	*texture;
 
 	if (!(surface = IMG_Load(file)))
-		return (ui_ret_null_error("ui_load_image", IMG_GetError(), NULL));
+	{
+		return (ui_ret_null_error("ui_load_image IMG_Load",
+				IMG_GetError(), NULL));
+	}
 	if (!(texture = SDL_CreateTextureFromSurface(rend, surface)))
 		return (ui_ret_null_error("ui_load_image", SDL_GetError(), NULL));
 	SDL_FreeSurface(surface);

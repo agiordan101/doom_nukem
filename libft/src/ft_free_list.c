@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: widrye <widrye@student.le-101.fr>          +#+  +:+       +#+        */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 19:14:19 by widrye            #+#    #+#             */
-/*   Updated: 2020/02/27 19:21:28 by widrye           ###   ########lyon.fr   */
+/*   Updated: 2020/05/17 23:00:02 by gal              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void ft_free_list(t_list *lst)
+void	ft_free_list(t_list *lst)
 {
 	t_list *tmp;
 

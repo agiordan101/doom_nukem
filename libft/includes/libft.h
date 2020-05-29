@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: widrye <widrye@student.le-101.fr>          +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 10:23:36 by gmonacho          #+#    #+#             */
-/*   Updated: 2020/02/27 20:25:49 by widrye           ###   ########lyon.fr   */
+/*   Updated: 2020/05/29 13:27:03 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -60,14 +59,15 @@ float				ft_atof(const char *str);
 int					ft_count_words(char *str);
 
 void				ft_2dstrdel(char ***tab);
-void    			ft_2dputendl(const char **str);
+void				ft_2dputendl(const char **str);
 void				ft_2dintdel(int ***atab, int len);
 void				ft_2dputint(int **tab, int ilen, int jlen);
-int					**ft_2dintpushback(int **tab, int size_i, int size_j, int *line);
+int					**ft_2dintpushback(int **tab, int size_i,
+										int size_j, int *line);
 char				**ft_2dstrpushback(char **tab, int size_i, char *line);
-int     			ft_2dstrlen(char **tab);
-
+int					ft_2dstrlen(char **tab);
 char				*ft_strdup(const char *s1);
+char				*ft_strndup(const char *str, size_t n);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
@@ -77,7 +77,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrcher(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack,
-			const char *needle, size_t len);
+								const char *needle, size_t len);
 char				*ft_strtrim(const char *s);
 char				**ft_strsplit(const char *s, char c);
 char				*ft_strjoin(const char *s1, const char *s2);
@@ -86,10 +86,11 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strrchr(const char *s, int c);
-char    			*ft_strrev(char *str);
+char				*ft_strrev(char *str);
 
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
+size_t				ft_strcspn(const char *s, const char *charset);
 size_t				ft_lstlen(t_list **alst);
 size_t				ft_tablen(void **tab);
 

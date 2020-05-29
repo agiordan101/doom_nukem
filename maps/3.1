@@ -1,283 +1,272 @@
+
+###########
 Player
 {
-	posx = 400
-	posy = 900
-	posz = 275
+	posx = 0
+	posy = 0
+	posz = 0
 	dir = 0
-	width = 70
-	height = 70
+	width = 50
+	height = 50
 	velocity = 5
 }
-
+Sphere
+{
+	posx = 0
+	posy = 0
+	posz = 50
+	radius = 10000
+	texture = fractale1.jpg
+}
 Object
-{	
-	type = LIGHT
-	posx = 300
-	posy = 950
-	posz = 150
+{
+	type = END
+	posx = 153
+	posy = 11
+	posz = 0
 	width = 30
 	height = 30
-	data = 1
-	light = 1
+	dir = 0
+	light = 50
+	texture = brique.png
+}
+Object
+{
+	type = LIGHT
+	posx = 77
+	posy = 486
+	posz = 10
+	width = 30
+	height = 30
+	dir = 0
+	light = 100
 	texture = pq.png
 }
 Object
-{	
+{
 	type = LIGHT
-	posx = 300
-	posy = 300
-	posz = 150
+	posx = 77
+	posy = -164
+	posz = 10
 	width = 30
 	height = 30
-	data = 1
-	light = 1
+	dir = 0
+	light = 100
 	texture = pq.png
 }
 Object
-{	
+{
 	type = LIGHT
-	posx = -50
-	posy = 250
-	posz = 200
+	posx = -273
+	posy = -214
+	posz = 60
 	width = 30
 	height = 30
-	data = 0.2
-	light = 1
+	dir = 0
+	light = 100
 	texture = pq.png
 }
-Object						// test box 2
-{	
+Object
+{
 	type = BOX
-	posx = 120
-	posy = 200
-	posz = 100
+	posx = -103
+	posy = -264
+	posz = -40
 	width = 20
 	height = 20
-	light = 1
-	texture = Elephantride.png
+	dir = 0
+	light = 100
+	texture = brique.png
 }
-
-Object						// test porte 1
-{	
+Object
+{
 	type = DOOR
-	posx = 400
-	posy = 240
-	posz = 100
+	posx = 177
+	posy = -224
+	posz = -40
 	width = 60
 	height = 80
-	light = 1
 	dir = 0
+	light = 100
 	texture = 150x150.png
 }
-Object						// test porte 2
-{	
+Object
+{
 	type = DOOR
-	posx = 400
-	posy = 360
-	posz = 100
+	posx = 177
+	posy = -104
+	posz = -40
 	width = 60
 	height = 80
-	light = 1
 	dir = 1
+	light = 100
 	texture = doorfront.png
 }
-Object						// test porte 3
-{	
+Object
+{
 	type = DOOR
-	posx = 400
-	posy = 480
-	posz = 100
+	posx = 177
+	posy = 16
+	posz = -40
 	width = 60
 	height = 80
-	light = 1
 	dir = 2
+	light = 100
 	texture = doorfront.png
 }
-Object						// test porte 4
-{	
+Object
+{
 	type = DOOR
-	posx = 400
-	posy = 600
-	posz = 100
+	posx = 177
+	posy = 136
+	posz = -40
 	width = 60
 	height = 80
-	light = 1
 	dir = 3
+	light = 100
 	texture = doorfront.png
 }
-
-Mooooob
+Polygon
 {
-	posx = 400
-	posy = 650
-	posz = 150
-	height = 50
-	width = 30
-	health = 50
-	damage = 1
-	dir = -90
-	velocity = 2
-	light = 1
+	dot = x:-323 y:186 z:160
+	dot = x:-323 y:-314 z:160
+	dot = x:-323 y:-314 z:-90
+	dot = x:-323 y:186 z:-90
+	light = 100
+	texture = brique.png
+}
+Polygon
+{
+	dot = x:377 y:-314 z:-15
+	dot = x:377 y:186 z:-15
+	dot = x:377 y:186 z:-90
+	dot = x:377 y:-314 z:-90
+	light = 100
+	texture = brique.png
+}
+Polygon
+{
+	dot = x:477 y:-314 z:60
+	dot = x:477 y:186 z:60
+	dot = x:477 y:186 z:-15
+	dot = x:477 y:-314 z:-15
+	light = 100
+	texture = plafond.png
+}
+Polygon
+{
+	dot = x:477 y:-314 z:60
+	dot = x:377 y:-314 z:60
+	dot = x:377 y:-314 z:-15
+	dot = x:477 y:-314 z:-15
+	light = 100
+	texture = brique.png
+}
+Polygon
+{
+	dot = x:477 y:186 z:60
+	dot = x:377 y:186 z:60
+	dot = x:377 y:186 z:-15
+	dot = x:477 y:186 z:-15
+	light = 100
+	texture = brique.png
+}
+Polygon
+{
+	dot = x:-123 y:-314 z:60
+	dot = x:377 y:-314 z:60
+	dot = x:377 y:-314 z:-90
+	dot = x:-123 y:-314 z:-90
+	light = 100
+	texture = elephantride.png
+}
+Polygon
+{
+	dot = x:-123 y:186 z:60
+	dot = x:-123 y:686 z:60
+	dot = x:-123 y:686 z:-140
+	dot = x:-123 y:186 z:-140
+	light = 100
+	texture = brique.png
+}
+Polygon
+{
+	dot = x:377 y:686 z:60
+	dot = x:377 y:186 z:60
+	dot = x:377 y:186 z:-140
+	dot = x:377 y:686 z:-140
+	light = 100
+	texture = brique.png
+}
+Polygon
+{
+	dot = x:-123 y:686 z:60
+	dot = x:377 y:686 z:60
+	dot = x:377 y:686 z:-140
+	dot = x:-123 y:686 z:-140
+	light = 100
+	texture = elephantride.png
+}
+Polygon
+{
+	dot = x:-123 y:436 z:-140
+	dot = x:-123 y:686 z:-60
+	dot = x:377 y:686 z:-60
+	dot = x:377 y:436 z:-140
+	light = 100
+	texture = brique.png
+}
+Polygon
+{
+	dot = x:-123 y:186 z:-140
+	dot = x:-123 y:686 z:-140
+	dot = x:377 y:686 z:-140
+	dot = x:377 y:186 z:-140
+	light = 100
 	texture = Mario_Ghost.png
 }
-
-	/* Murs du haut */
-Polygon									//Mur entier
+Polygon
 {
-	dot = x:-100, y:650, z:300
-	dot = x:-100, y:150, z:300
-	dot = x:-100, y:150, z:50
-	dot = x:-100, y:650, z:50
-	light = 1
-	texture = Brique.png
+	dot = x:-123 y:186 z:-140
+	dot = x:377 y:186 z:-140
+	dot = x:377 y:186 z:-90
+	dot = x:-123 y:186 z:-90
+	light = 100
+	texture = brique.png
 }
-Polygon									//Demi-mur
+Polygon
 {
-	dot = x:600, y:150, z:125
-	dot = x:600, y:650, z:125
-	dot = x:600, y:650, z:50
-	dot = x:600, y:150, z:50
-	light = 1
-	texture = Brique.png
+	dot = x:-323 y:186 z:-90
+	dot = x:-323 y:-314 z:-90
+	dot = x:377 y:-314 z:-90
+	dot = x:377 y:186 z:-90
+	light = 100
+	texture = plafond.png
 }
-Polygon									//Fond principal renfoncement
+Polygon
 {
-	dot = x:700, y:150, z:200
-	dot = x:700, y:650, z:200
-	dot = x:700, y:650, z:125
-	dot = x:700, y:150, z:125
-	light = 1
-	texture = Plafond.png
+	dot = x:477 y:-314 z:-15
+	dot = x:477 y:186 z:-15
+	dot = x:377 y:186 z:-15
+	dot = x:377 y:-314 z:-15
+	light = 100
+	texture = plafond.png
 }
-Polygon									//Fond renfoncement 2
+Polygon
 {
-	dot = x:700, y:150, z:200
-	dot = x:600, y:150, z:200
-	dot = x:600, y:150, z:125
-	dot = x:700, y:150, z:125
-	light = 1
-	texture = Brique.png
+	dot = x:-123 y:686 z:60
+	dot = x:-123 y:-314 z:60
+	dot = x:377 y:-314 z:60
+	dot = x:377 y:686 z:60
+	light = 100
+	texture = plafond.png
 }
-Polygon									//Fond renfoncement 3
+Polygon
 {
-	dot = x:700, y:650, z:200
-	dot = x:600, y:650, z:200
-	dot = x:600, y:650, z:125
-	dot = x:700, y:650, z:125
-	light = 1
-	texture = Brique.png
-}
-Polygon									//Fond
-{
-	dot = x:100, y:150, z:200
-	dot = x:600, y:150, z:200
-	dot = x:600, y:150, z:50
-	dot = x:100, y:150, z:50
-	light = 1
-	texture = Elephantride.png
-}
-
-
-
-/* Murs du bas */
-
-Polygon									//Mur complet
-{
-	dot = x:100, y:650, z:200
-	dot = x:100, y:1150, z:200
-	dot = x:100, y:1150, z:0
-	dot = x:100, y:650, z:0
-	light = 1
-	texture = Brique.png
-}
-Polygon									//Mur complet
-{
-	dot = x:600, y:1150, z:200
-	dot = x:600, y:650, z:200
-	dot = x:600, y:650, z:0
-	dot = x:600, y:1150, z:0
-	light = 1
-	texture = Brique.png
-}
-Polygon									//Fond
-{
-	dot = x:100, y:1150, z:200
-	dot = x:600, y:1150, z:200
-	dot = x:600, y:1150, z:0
-	dot = x:100, y:1150, z:0
-	light = 1
-	texture = Elephantride.png
-}
-
-
-Polygon								//Rampe
-{
-	dot = x:100, y:900, z:0
-	dot = x:100, y:1150, z:80
-	dot = x:600, y:1150, z:80
-	dot = x:600, y:900, z:0
-	light = 1
-	texture = Brique.png
-}
-
-
-	/* Sol */
-
-Polygon								//Sol bas
-{
-	dot = x:100, y:650, z:0
-	dot = x:100, y:1150, z:0
-	dot = x:600, y:1150, z:0
-	dot = x:600, y:650, z:0
-	light = 1
-	texture = Mario_Ghost.png
-}
-Polygon								//Marche
-{
-	dot = x:100, y:650, z:0
-	dot = x:600, y:650, z:0
-	dot = x:600, y:650, z:50
-	dot = x:100, y:650, z:50
-	light = 1
-	texture = Brique.png
-}
-Polygon								//Sol haut
-{
-	dot = x:-100, y:650, z:50
-	dot = x:-100, y:150, z:50
-	dot = x:600, y:150, z:50
-	dot = x:600, y:650, z:50
-	light = 1
-	texture = Plafond.png
-}
-Polygon								//Sol renfoncement
-{
-	dot = x:700, y:150, z:125
-	dot = x:700, y:650, z:125
-	dot = x:600, y:650, z:125
-	dot = x:600, y:150, z:125
-	light = 1
-	texture = Plafond.png
-}
-
-
-	/* Plafond */
-
-Polygon								//Plafond
-{
-	dot = x:100, y:1150, z:200
-	dot = x:100, y:150, z:200
-	dot = x:600, y:150, z:200
-	dot = x:600, y:1150, z:200
-	light = 1
-	texture = Plafond.png
-}
-Polygon								//Plafond renforcement
-{
-	dot = x:600, y:650, z:200
-	dot = x:600, y:150, z:200
-	dot = x:700, y:150, z:200
-	dot = x:700, y:650, z:200
-	light = 1
-	texture = Plafond.png
+	dot = x:377 y:186 z:60
+	dot = x:377 y:-314 z:60
+	dot = x:477 y:-314 z:60
+	dot = x:477 y:186 z:60
+	light = 100
+	texture = plafond.png
 }

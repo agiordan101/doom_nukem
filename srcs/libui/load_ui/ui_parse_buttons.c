@@ -1,20 +1,22 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_parse_buttons.c                               .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 17:34:42 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/23 15:51:46 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_parse_buttons.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:15:56 by gal               #+#    #+#             */
+/*   Updated: 2020/05/17 23:45:17 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "ui.h"
 #include "ui_error.h"
 
-static int	parse_buttons_loop(t_winui *win, char **text, int *i, t_frame *frame)
+static int	parse_buttons_loop(t_winui *win,
+								char **text,
+								int *i,
+								t_frame *frame)
 {
 	t_button	*b;
 	int			index;
@@ -26,7 +28,7 @@ static int	parse_buttons_loop(t_winui *win, char **text, int *i, t_frame *frame)
 		if (!ft_strchr(text[index], '{'))
 		{
 			return (ui_ret_error("parse_buttons",
-					"'{' (to open button block) is missing", 0));
+			"'{' (to open button block) is missing", 0));
 		}
 		incre_double_int(&index, i, 1);
 		if ((b = parse_button(win, &text[index], i)))
@@ -45,10 +47,8 @@ static int	parse_buttons_loop(t_winui *win, char **text, int *i, t_frame *frame)
 
 int			parse_buttons(t_winui *win, char **text, int *i)
 {
-	int			index;
 	t_frame		*frame;
 
-	index = 0;
 	frame = win->ui.frames;
 	if (!parse_buttons_loop(win, text, i, frame))
 		return (ui_ret_error("parse_buttons", "parse_buttons_loop failed", 0));

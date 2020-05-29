@@ -1,14 +1,13 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_set_button_function.c                         .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 17:37:16 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/27 21:02:45 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_set_button_function.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:18:31 by gal               #+#    #+#             */
+/*   Updated: 2020/05/06 14:18:31 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "ui_win.h"
@@ -51,7 +50,8 @@ void	ui_set_text_entry_function(t_winui *win,
 		b = f->buttons;
 		while (b)
 		{
-			if (b->type == UI_BUTTON_TEXT_ENTRY && ft_strcmp(b->id, button_id) == 0)
+			if (b->type == UI_BUTTON_TEXT_ENTRY
+			&& ft_strcmp(b->id, button_id) == 0)
 			{
 				((t_text_entry_button*)b->data)->argument = argument;
 				((t_text_entry_button*)b->data)->f = fn;

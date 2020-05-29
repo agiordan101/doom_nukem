@@ -1,71 +1,97 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing_utils.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/03/08 12:23:08 by widrye            #+#    #+#             */
+/*   Updated: 2020/05/19 18:23:30 by gal              ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "doom_nukem.h"
 #include "ui_error.h"
 
-void		fill_poly_object_norm(char *tmp, t_poly *poly_object)
+int			fill_poly_object_norm(t_map *map, char *tmp, t_poly *poly_object)
 {
-	if (!(poly_object->texture = IMG_Load(tmp)))
-	{
-		ui_ret_error("fill_poly_object", SDL_GetError(), 0);
-		exit(0);
-		return ;
-	}
-	if (!(poly_object->texture = SDL_ConvertSurfaceFormat(
-		poly_object->texture, SDL_PIXELFORMAT_ARGB8888, 0)))
-	{
-		ui_ret_error("fill_poly_object", SDL_GetError(), 0);
-		exit(0);
-		return ;
-	}
+	if (!is_id_in_stock(map->texture_stock, tmp))
+		add_stock_texture(&map->texture_stock, new_stock_texture(tmp));
+	poly_object->texture = get_surface_from_stock(map->texture_stock, tmp);
+	return (0);
 }
 
-int			count_line(int fp1)
+char		**lst_to_tab(t_list *lst, int height)
 {
-	int		nb;
-	char	*line;
-
-	nb = 0;
-	while (get_next_line(fp1, &line) > 0)
-	{
-		free(line);
-		nb++;
-	}
-	return (nb);
-}
-
-char		**ft_fill_map(int fd, int fp1)
-{
-	char	*line;
-	char	**tab;
 	int		i;
-	int		nb;
+	char	**tab;
+	t_list	*l;
 
 	i = 0;
-	nb = count_line(fp1);
-	if (!(tab = (char **)malloc(sizeof(char *) * (nb + 1))))
+	l = lst;
+	if (!(tab = (char **)malloc(sizeof(char *) * (height + 1))))
 		return (NULL);
-	while (get_next_line(fd, &line) > 0)
+	tab[height] = NULL;
+	while (l && i < height)
 	{
-		tab[i] = ft_strdup(line);
-		free(line);
+		if (!(tab[i] = ft_strdup(l->content)))
+			return (NULL);
+		i++;
+		l = l->next;
+	}
+	ft_free_list(lst);
+	return (tab);
+}
+
+char		**ft_fill_map(int fd)
+{
+	char	*line;
+	t_list	*lst;
+	int		i;
+	int		ret;
+
+	i = 0;
+	lst = NULL;
+	while ((ret = get_next_line(fd, &line)) != 0)
+	{
+		if (ret == -1 || (lst = ft_lst_pb(&lst, line)) == NULL)
+		{
+			ft_free_list(lst);
+			return (NULL);
+		}
 		i++;
 	}
-	tab[i] = NULL;
-	return (tab);
+	return (lst_to_tab(lst, i));
 }
 
-char		**fillntesttab(int fd, int fd1)
+char		**fillntesttab(int fd)
 {
-	char **tab;
+	char		**tab;
+	static char	tmp[13];
 
+	tmp[12] = '\0';
+	if ((read(fd, tmp, 12)) > 0)
+	{
+		if (!(ft_strcmp(tmp, "#GAMEREADY#\n")))
+			create_tmp_bin_files(fd);
+		else if (ft_strcmp(tmp, "\n###########") != 0)
+		{
+			ft_putendl("error map syntax");
+			return (NULL);
+		}
+	}
 	tab = NULL;
-	tab = ft_fill_map(fd, fd1);
-	ft_parse_error(tab);
+	tab = ft_fill_map(fd);
+	if (ft_parse_error(tab) == (-1))
+		return (NULL);
 	return (tab);
 }
 
-void		fill_poly(t_poly *poly, t_map *map)
+int			fill_poly(t_poly *poly, t_map *map)
 {
-	fill_poly_mob(poly, map->mob);
-	fill_poly_object(poly, map->objects);
+	if (fill_poly_mob(map, poly, map->mob) == -1 ||
+	fill_poly_object(map, poly, map->objects) == -1)
+		return (-1);
 	ft_putendl("Fin parsing\n");
+	return (0);
 }

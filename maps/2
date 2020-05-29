@@ -5,7 +5,7 @@ Player
 	posz = 0
 	dir = 0
 	width = 30
-	height = 50
+	height = 10
 	velocity = 5
 }
 Object

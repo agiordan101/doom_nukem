@@ -1,14 +1,13 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_load.c                                        .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 17:34:34 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/24 13:46:11 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_load.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/21 17:34:34 by gmonacho          #+#    #+#             */
+/*   Updated: 2020/05/18 11:35:33 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
@@ -94,31 +93,32 @@ static int		ui_load_text(t_winui *win, char **text)
 	i = 0;
 	while (text[i])
 	{
-		if (ft_strcmp(text[i], "frame") != 0)
-			return (ui_load_error("ui_load", "frame expected", 0, i + 1));
-		i += 2;
-		if (!parse_frame(win, &text[i], &i))
-			return (ui_load_error("ui_load", "parse_frame failed", 0, i + 1));
-		if (text[i])
+		if (ft_strcmp(text[i], "frame") == 0)
 		{
-			if (ft_strcmp(text[i], "}") != 0)
+			i += 2;
+			if (!parse_frame(win, &text[i], &i))
+				return (ui_load_error("ui_load", "p_f failed", 0, i + 1));
+			if (text[i])
 			{
-				return (ui_load_error("ui_load",
+				if (ft_strcmp(text[i], "}") != 0)
+				{
+					return (ui_load_error("ui_load",
 						"frame is not correctly closed (!!only '}' expected!!)",
 						0, i + 1));
+				}
+				i++;
 			}
-			i++;
 		}
+		else
+			i++;
 	}
 	return (1);
 }
 
 int				ui_load(const char *path, t_winui *win)
 {
-	int		i;
 	char	**text;
 
-	i = 0;
 	if ((text = read_ui(path)) == NULL)
 		return (ui_ret_error("ui_load", "read_ui failed", 0));
 	if (!ui_load_text(win, text))

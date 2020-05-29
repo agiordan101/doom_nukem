@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   doom_nukem.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/19 09:32:17 by gal               #+#    #+#             */
+/*   Updated: 2020/05/28 16:45:00 by gal              ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef DOOM_NUKEM_H
 # define DOOM_NUKEM_H
 
@@ -7,27 +19,40 @@
 # include <fcntl.h>
 # include <math.h>
 # include <pthread.h>
-# include <stdio.h>///////////////////
-
-# include "SDL.h"
-# include "SDL_ttf.h"
-# include "SDL_image.h"
-# include "SDL_mixer.h"
+# include <stdio.h>
+# include <sys/stat.h>
+# ifdef __linux__
+#  include "SDL2/SDL.h"
+#  include "SDL2/SDL_ttf.h"
+#  include "SDL2/SDL_image.h"
+#  include "SDL2/SDL_mixer.h"
+# else
+#  include "SDL.h"
+#  include "SDL_ttf.h"
+#  include "SDL_image.h"
+#  include "SDL_mixer.h"
+# endif
 # include "libft.h"
-# include <time.h>////////////////////////////
+# include <time.h>
 
-# define WIDTH				1200
-# define HEIGHT				800
+# define WIDTH			    600
+# define HEIGHT				400
+# define SENSITIVE			0.0015
+
+/*
+** 0.00000015 pour aducimet
+*/
+
+# define OBJECT_ROTATION_VELOCITY	10
 
 # define MAX_SECTORS		25
 # define NEXT_FACTOR		50
-# define HEIGHT_WALL		40
-# define RENDER_DISTANCE	HEIGHT_WALL * 200
 # define SIDE_LEN			40
 # define ID_SIZE            20
 # define ANG_HOR_VER        5
 # define MIN_TEXT_SIZE      10
 # define TEXT_RATIO         0.021
+# define NEXT_RADIUS		20
 
 # define _PI_4				0.78539816339
 # define _3_PI_2		    4.71238898038

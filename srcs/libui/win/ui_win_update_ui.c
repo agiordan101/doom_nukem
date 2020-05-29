@@ -1,18 +1,26 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_win_update_ui.c                               .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 17:37:31 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/03 15:04:49 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_win_update_ui.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:18:48 by gal               #+#    #+#             */
+/*   Updated: 2020/05/06 14:18:49 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "ui_win.h"
 #include "libft.h"
+
+static void		ui_event_cursor(t_winui *win,
+								Uint32 *last_tick,
+								Uint32 *new_tick)
+{
+	if (win->ui.cursor_position > 0)
+		win->ui.cursor_position--;
+	*last_tick = *new_tick;
+}
 
 static void		ui_event(t_winui *win)
 {
@@ -29,15 +37,11 @@ static void		ui_event(t_winui *win)
 			&& win->ui.clicked_button->type == UI_BUTTON_TEXT_ENTRY)
 			{
 				if (win->event.key.keysym.scancode == SDL_SCANCODE_LEFT)
-				{
-					if (win->ui.cursor_position > 0)
-						win->ui.cursor_position--;
-					last_tick = new_tick;
-				}
+					ui_event_cursor(win, &last_tick, &new_tick);
 				if (win->event.key.keysym.scancode == SDL_SCANCODE_RIGHT)
 				{
-					if (win->ui.cursor_position < (int)ft_strlen(
-					((t_text_entry_button*)win->ui.clicked_button->data)->new_text))
+					if (win->ui.cursor_position < (int)ft_strlen((
+				(t_text_entry_button*)win->ui.clicked_button->data)->new_text))
 						win->ui.cursor_position++;
 					last_tick = new_tick;
 				}

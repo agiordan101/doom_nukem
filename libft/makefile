@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: widrye <widrye@student.le-101.fr>          +#+  +:+       +#+         #
+#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/02 16:01:28 by gmonacho          #+#    #+#              #
-#    Updated: 2020/02/27 19:20:25 by widrye           ###   ########lyon.fr    #
+#    Updated: 2020/05/29 13:30:44 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ SRCS = ./src/ft_atoi.c\
 	./src/ft_strcpy.c\
 	./src/ft_strdel.c\
 	./src/ft_strdup.c\
+	./src/ft_strndup.c\
+	./src/ft_strcspn.c\
 	./src/ft_strequ.c\
 	./src/ft_strjoin.c\
 	./src/ft_strnequ.c\

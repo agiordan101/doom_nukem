@@ -1,11 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_menu.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/10 17:03:33 by gal               #+#    #+#             */
+/*   Updated: 2020/05/17 22:47:58 by gal              ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "doom_nukem.h"
 #include "ui_win.h"
 #include "ui.h"
 #include "ui_draw.h"
 #include "ui_error.h"
 
-
-static void	main_menu_quit(t_win *win, Uint32 ms)
+void			main_menu_quit(t_win *win, Uint32 ms)
 {
 	Mix_FadeOutMusic(ms);
 	ui_free_ui(&win->winui->ui);
@@ -20,7 +31,8 @@ static void		menu_change_loop(void *argument)
 	*(arg_menu->loop) = arg_menu->value;
 }
 
-static void		set_menu_button_function(t_winui *winui, t_map *map, int *next_loop)
+static void		set_menu_button_function(t_winui *winui,
+							t_map *map, int *next_loop)
 {
 	map->editor.arg_menu_tab[0] = (t_arg_menu){next_loop,
 											2};
@@ -48,16 +60,6 @@ static void		set_menu_button_function(t_winui *winui, t_map *map, int *next_loop
 									&map->editor.arg_menu_tab[3]);
 }
 
-int		init_main_menu(t_win *win)
-{
-	if (!(win->winui->ui.button_font = ui_load_font("TTF/DooM.ttf", 100)))
-		return (ui_ret_error("init_main_menu", "ui_load_font failed", 0));
-	if (!ui_load("interfaces/menu_interface", win->winui))
-		return (ui_ret_error("init_main_menu", "ui_load failed", 0));
-	SDL_SetRelativeMouseMode(SDL_FALSE);
-	return (1);
-}
-
 static void		main_menu_ui(t_win *win)
 {
 	ui_set_draw_color(win->rend, &(SDL_Color){71, 27, 27, 255});
@@ -68,11 +70,12 @@ static void		main_menu_ui(t_win *win)
 	ui_update_ui(win->winui);
 }
 
-int			main_menu(t_win *win, t_map *map)
+int				main_menu(t_win *win, t_map *map, char *arg)
 {
 	int			next_loop;
 	int			f_set;
 
+	map->editor.export.path = ft_strdup(arg);
 	next_loop = 1;
 	f_set = 0;
 	if (!init_main_menu(win))
@@ -86,19 +89,7 @@ int			main_menu(t_win *win, t_map *map)
 			f_set = 1;
 		}
 		main_menu_ui(win);
-		if (win->winui->event.type == SDL_QUIT)
-			next_loop = 0;
-		else if (next_loop != 1)
-		{
-			f_set = 0;
-			main_menu_quit(win, 100);
-			if (next_loop == 2)
-				game_loop(win, map);
-			else if (next_loop == 3)
-				editor_loop(win, map);
-			else if (next_loop == 4)
-				print_credit(win);
-		}
+		condition_loop(win, map, &next_loop, &f_set);
 	}
 	main_menu_quit(win, 500);
 	return (next_loop);

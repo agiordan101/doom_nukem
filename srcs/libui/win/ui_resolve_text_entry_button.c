@@ -1,14 +1,13 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_resolve_text_entry_button.c                   .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 17:37:11 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/02 16:00:50 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_resolve_text_entry_button.c                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:18:28 by gal               #+#    #+#             */
+/*   Updated: 2020/05/19 12:00:15 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "ui_win.h"
@@ -90,14 +89,27 @@ static void		text_input_else(t_winui *win,
 	}
 }
 
-void			ui_resolve_text_entry_button(t_winui *win,
-							t_text_entry_button *text_entry_button)
+static void		ui_text_input(t_text_entry_button *text_entry_button,
+								t_winui *win,
+								Uint32 *n_ti,
+								Uint32 *l_ti)
 {
-	static Uint32	last_tick = 0;
-	Uint32			new_tick;
-	
-	new_tick = SDL_GetTicks();
-	if (last_tick == 0 || new_tick - last_tick >= win->ui.delay_text_entry)
+	if (text_entry_button->text_type & UI_TEXT_TYPE_DIGITAL)
+		text_input_digital(win, text_entry_button);
+	else
+		text_input_else(win, text_entry_button);
+	*l_ti = *n_ti;
+	win->ui.last_char = win->event.text.text[0];
+}
+
+void			ui_resolve_text_entry_button(t_winui *win,
+						t_text_entry_button *text_entry_button)
+{
+	static Uint32	l_ti = 0;
+	Uint32			n_ti;
+
+	n_ti = SDL_GetTicks();
+	if (l_ti == 0 || n_ti - l_ti >= win->ui.delay_text_entry)
 	{
 		if (win->event.type == SDL_KEYDOWN)
 		{
@@ -105,21 +117,15 @@ void			ui_resolve_text_entry_button(t_winui *win,
 				&& win->ui.cursor_position > 0)
 			{
 				suppress_char(win, text_entry_button);
-				last_tick = new_tick;
+				l_ti = n_ti;
 			}
 		}
 	}
 	if (win->event.type == SDL_TEXTINPUT)
 	{
-		if (last_tick == 0 || new_tick - last_tick >= win->ui.delay_text_entry
-		|| win->ui.last_char == '\0' || win->event.text.text[0] != win->ui.last_char)
-		{
-			if (text_entry_button->text_type & UI_TEXT_TYPE_DIGITAL)
-				text_input_digital(win, text_entry_button);
-			else
-				text_input_else(win, text_entry_button);
-			last_tick = new_tick;
-			win->ui.last_char = win->event.text.text[0];
-		}
+		if (l_ti == 0 || n_ti - l_ti >= win->ui.delay_text_entry
+		|| win->ui.last_char == '\0' || win->event.text.text[0]
+		!= win->ui.last_char)
+			ui_text_input(text_entry_button, win, &n_ti, &l_ti);
 	}
 }

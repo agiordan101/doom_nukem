@@ -1,14 +1,13 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_draw_one_line_return.c                        .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 17:35:53 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/11 18:15:20 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_draw_one_line_return.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:16:50 by gal               #+#    #+#             */
+/*   Updated: 2020/05/06 14:16:51 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "ui_texture.h"
@@ -105,13 +104,8 @@ int				draw_one_line_return(SDL_Renderer *rend,
 	while (str && width > text->max_width
 			&& n_to_rem + n_rem_words < n_words)
 		width = remove_word(text, &str, ++n_rem_words);
-	if (n_rem_words)
+	if (n_rem_words && width)
 	{
-		if (width == 0)
-		{
-			ft_strdel(&str);
-			return (-1);
-		}
 		tmp = str;
 		str = remove_words_from_end(text->str, n_rem_words);
 		ft_strdel(&tmp);

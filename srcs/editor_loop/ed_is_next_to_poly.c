@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ed_is_next_to_poly.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:21:23 by gal               #+#    #+#             */
+/*   Updated: 2020/05/06 14:21:24 by gal              ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "doom_nukem.h"
 
 t_dot	ed_is_next_to_poly(const t_map *map, t_dot point, int radius)
@@ -11,19 +23,18 @@ t_dot	ed_is_next_to_poly(const t_map *map, t_dot point, int radius)
 	len = -1;
 	result = point;
 	p = map->polys;
-	while (p)
+	while (p && (i = -1) == -1)
 	{
-		i = 0;
-		while (i < 4)
+		while (++i < 4)
 		{
-			new_len = ed_get_line_len(&(t_line){point, (t_dot){p->dots[i].x, p->dots[i].y}});
+			new_len = ed_get_line_len(&(t_line){point,
+			(t_dot){p->dots[i].x, p->dots[i].y}});
 			if ((len == -1 && new_len <= radius) ||
 				(new_len <= len && new_len <= radius))
 			{
 				result = (t_dot){p->dots[i].x, p->dots[i].y};
 				len = new_len;
 			}
-			i++;
 		}
 		p = p->next;
 	}

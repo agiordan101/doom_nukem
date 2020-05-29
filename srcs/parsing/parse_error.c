@@ -1,39 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_error.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: widrye <widrye@student.le-101.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/03/10 18:04:54 by aducimet          #+#    #+#             */
+/*   Updated: 2020/03/12 20:42:59 by widrye           ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "doom_nukem.h"
 
-void	ft_if_value(char **tab)
+static int	ft_if_value(char **tab)
 {
 	int i;
 	int y;
 	int count;
 
-	y = 0;
-	i = 0;
+	i = -1;
 	count = 0;
-	while (tab[i])
+	while (tab[++i])
 	{
 		if (ft_strstr(tab[i], "="))
 		{
-			y = 0;
-			while (tab[i][y])
+			y = -1;
+			while (tab[i][++y])
 			{
 				count = 0;
 				if ((tab[i][y] >= 48 && tab[i][y] <= 122) ||
 				tab[i][y] == 40 || tab[i][y] == 41)
 					count++;
-				y++;
 			}
 			if (count == 0)
-			{
-				printf("i = %d\n", i);
-				ft_putendl("error value");
-				exit(0);             // a modifier
-			}
+				return (-1);
 		}
-		i++;
 	}
+	return (0);
 }
 
-static void	ft_count_brace(char **tab)
+static int	ft_count_brace(char **tab)
 {
 	int i;
 	int brace;
@@ -49,27 +55,13 @@ static void	ft_count_brace(char **tab)
 		i++;
 	}
 	if (brace != 0)
-		ft_putendl("error brace");
+		return (-1);
+	return (0);
 }
-// static void needed_value(char **tab)
-// {
-// 	int i;
 
-// 	i = 0;
-// 	while(tab[i])
-// 	{
-// 		if (ft_strstr(tab[i], "mob"))
-// 		{
-			
-// 		}
-// 		i++;
-// 	}
-
-// }
-
-int		ft_parse_error(char **tab)
+int			ft_parse_error(char **tab)
 {
-	ft_if_value(tab);
-	ft_count_brace(tab);
+	if ((ft_if_value(tab) == -1) || (ft_count_brace(tab) == -1))
+		return (-1);
 	return (0);
 }

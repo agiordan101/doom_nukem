@@ -1,21 +1,25 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_texture.h                                     .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 18:20:45 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 18:20:51 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_texture.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/21 18:20:45 by gmonacho          #+#    #+#             */
+/*   Updated: 2020/05/28 16:46:04 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UI_TEXTURE_H
 # define UI_TEXTURE_H
 
-# include "SDL.h"
-# include "SDL_ttf.h"
+# ifdef __linux__
+#  include "SDL2/SDL.h"
+#  include "SDL2/SDL_ttf.h"
+# else
+#  include "SDL.h"
+#  include "SDL_ttf.h"
+# endif
 # include "ui_shape.h"
 
 void				ui_set_rend_target(SDL_Renderer *rend,
@@ -126,5 +130,6 @@ void				ui_draw_text_in_rect(SDL_Renderer *rend,
 int					ui_get_x_alignment(t_rect rect,
 										t_text_align aligment,
 										int text_width);
+int					get_dst_y(t_text_line_kit *text);
 
 #endif

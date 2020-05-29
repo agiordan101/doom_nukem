@@ -1,14 +1,13 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_win.h                                         .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 18:21:05 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/17 14:33:34 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_win.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/21 18:21:05 by gmonacho          #+#    #+#             */
+/*   Updated: 2020/05/28 16:46:20 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UI_WIN_H
@@ -19,7 +18,11 @@
 # include "ui_event.h"
 # include "ui_shape.h"
 # include "ui_texture.h"
-# include "SDL.h"
+# ifdef __linux__
+#  include "SDL2/SDL.h"
+# else
+#  include "SDL.h"
+# endif
 
 typedef struct			s_texture
 {
@@ -77,10 +80,10 @@ void					ui_update_buttons(t_winui *win);
 void					ui_display_simple(t_winui *win,
 								t_simple_button *simple_button,
 								const t_rect *rect);
-t_rect					ui_get_name_side_rect(t_winui *win,
+t_rect					ui_get_name_side_rect(
 						t_text_entry_button *text_entry_button,
 						const t_rect *rect);
-t_rect					ui_get_text_side_rect(t_winui *win,
+t_rect					ui_get_text_side_rect(
 						t_text_entry_button *text_entry_button,
 						const t_rect *rect);
 void					ui_display_text_entry(t_winui *win,
@@ -114,6 +117,7 @@ void					ui_set_simple_button_function(t_winui *win,
 void					ui_set_text_entry_function(t_winui *win,
 		const char *button_id, void (*fn)(void *argument, char *button_output),
 		void *argument);
+void					ui_check_text_entry_button(t_winui *win);
 
 t_text_area				*ui_get_text_area_button(t_winui *win, const char *id);
 t_simple_button			*ui_get_simple_button(t_winui *win, const char *id);

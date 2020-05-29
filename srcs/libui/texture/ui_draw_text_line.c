@@ -1,20 +1,18 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ui_draw_text_line.c                              .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 17:36:03 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/13 12:43:49 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ui_draw_text_line.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/06 14:16:55 by gal               #+#    #+#             */
+/*   Updated: 2020/05/06 14:16:56 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "ui_texture.h"
 #include "ui_error.h"
 #include "libft.h"
-
 
 static void		fill_src_struct(const t_rect *data, t_rect **filled_rect)
 {
@@ -24,41 +22,35 @@ static void		fill_src_struct(const t_rect *data, t_rect **filled_rect)
 	(*filled_rect)->h = data->h;
 }
 
-static void		fill_src_rect(t_text_line_kit *text,
-								t_rect **src_rect,
-								t_dot texture_size,
-								int width)
+static void		fill_src_rect(t_text_line_kit *t,
+								t_rect **s_r,
+								t_dot s,
+								int w)
 {
-	if (width > text->max_width)
+	if (w > t->max_width)
 	{
-		if (text->alignment & TEXT_ALIGN_LEFT)
+		if (t->alignment & TEXT_ALIGN_LEFT)
+			fill_src_struct(&(t_rect){0, 0, s.x * t->max_width / w, s.y}, s_r);
+		else if (t->alignment & TEXT_ALIGN_RIGHT)
 		{
-			fill_src_struct(&(t_rect){0, 0,
-					texture_size.x * text->max_width / width,
-					texture_size.y}, src_rect);
+			fill_src_struct(&(t_rect){s.x - s.x * t->max_width / w,
+			0, s.x, s.y}, s_r);
 		}
-		else if (text->alignment & TEXT_ALIGN_RIGHT)
+		else if (t->alignment & TEXT_ALIGN_CENTER)
 		{
-			fill_src_struct(&(t_rect){
-				texture_size.x - texture_size.x * text->max_width / width,
-				0, texture_size.x, texture_size.y}, src_rect);
-		}
-		else if (text->alignment & TEXT_ALIGN_CENTER)
-		{
-			fill_src_struct(&(t_rect){
-			texture_size.x / 2 - texture_size.x * text->max_width / width / 2,
-			0, texture_size.x * text->max_width / width, texture_size.y}, src_rect);
+			fill_src_struct(&(t_rect){s.x / 2 - s.x * t->max_width / w / 2,
+			0, s.x * t->max_width / w, s.y}, s_r);
 		}
 		else
 		{
-			free(*src_rect);
-			*src_rect = NULL;
+			free(*s_r);
+			*s_r = NULL;
 		}
 	}
 	else
 	{
-		free(*src_rect);
-		*src_rect = NULL;
+		free(*s_r);
+		*s_r = NULL;
 	}
 }
 
@@ -102,16 +94,6 @@ static t_rect	get_dst_rect(t_text_line_kit *text, int width)
 		else
 			return ((t_rect){text->pos.x, text->pos.y, width, text->height});
 	}
-}
-
-static int		get_dst_y(t_text_line_kit *text)
-{
-	if (text->alignment & TEXT_ALIGN_V_MIDDLE)
-		return (text->pos.y - text->height / 2);
-	else if (text->alignment & TEXT_ALIGN_V_TOP)
-		return (text->pos.y - text->height);
-	else
-		return (text->pos.y);
 }
 
 int				ui_draw_text_line(SDL_Renderer *rend,

@@ -1,166 +1,473 @@
+
+###########
 Player
 {
-	posx = 200
-	posy = 200
-	posz = 140
-	dir = -90
-	width = 30
-	height = 90
-	velocity = 10
+    posx = 10
+    posy = 10
+    posz = 10
+    dir = 0
+    width = 70
+    height = 70
+    velocity = 5
 }
-Mob
-{	
-	mob0
-	{	
-		type = 1
-		posx = 200
-		posy = 200
-		posz = 140
-		dir = -90
-		width = 30
-		height = 90
-		velocity = 10
-		health = 100
-	}
-	mob = 1
-	{	
-		type = 1
-		posx = 200
-		posy = 200
-		posz = 140
-		dir = -90
-		width = 30
-		height = 90
-		velocity = 10
-		health = 50
-	}
-	mob = 2
-	{
-		type = 3
-		posx = 200
-		posy = 200
-		posz = 140
-		dir = -90
-		width = 30
-		height = 90
-		velocity = 10
-		health = 50
-	}
-	mob = 3
-	{
-		type = 2
-		posx = 200
-		posy = 200
-		posz = 140
-		dir = -90
-		width = 30
-		height = 90
-		velocity = 10
-		health = 75
-	}
-}
-
-
-/* Salle du bas */
 Object
 {
-	posx = 100
-	posy = 100
-	posz = 100
-	width = 100
-	height = 100
-	texture = Brique.png
+    type = DOOR
+    posx = -484
+    posy = -243
+    posz = 0
+    width = 73
+    height = 60
+    dir = 30
+    light = 100
+    texture = Brique.png
 }
-Polygon
+Object
 {
-	dot = x:100, y:650, z:200
-	dot = x:100, y:150, z:200
-	dot = x:100, y:150, z:50
-	dot = x:100, y:650, z:50
-	texture = Brique.png
+    type = GRAVITY_INV
+    posx = -76
+    posy = -78
+    posz = 40
+    width = 30
+    height = 30
+    light = 100
+    texture = 150x150.png
 }
-Polygon
+Object
 {
-	dot = x:600, y:150, z:200
-	dot = x:600, y:650, z:200
-	dot = x:600, y:650, z:50
-	dot = x:600, y:150, z:50
-	texture = Brique.png
+    type = DOOR
+    posx = 274
+    posy = 272
+    posz = -20
+    width = 60
+    height = 40
+    dir = 3
+    light = 100
+    texture = doorfront.png
 }
-Polygon
+Object
 {
-	dot = x:100, y:150, z:200
-	dot = x:600, y:150, z:200
-	dot = x:600, y:150, z:50
-	dot = x:100, y:150, z:50
-	texture = Elephantride.png
+    type = DOOR
+    posx = 274
+    posy = 172
+    posz = -20
+    width = 60
+    height = 80
+    dir = 2
+    light = 100
+    texture = doorfront.png
 }
-Polygon
+Object
 {
-	dot = x:100, y:650, z:200
-	dot = x:600, y:650, z:200
-	dot = x:600, y:650, z:50
-	dot = x:100, y:650, z:50
-	texture = Vitre.png
+    type = DOOR
+    posx = 274
+    posy = 72
+    posz = -20
+    width = 60
+    height = 80
+    dir = 1
+    light = 100
+    texture = doorfront.png
 }
-Polygon
+Object
 {
-	dot = x:100, y:650, z:50
-	dot = x:100, y:150, z:50
-	dot = x:600, y:150, z:50
-	dot = x:600, y:650, z:50
-	texture = Plafond.png
+    type = DOOR
+    posx = 274
+    posy = -28
+    posz = -20
+    width = 60
+    height = 80
+    light = 100
+    texture = doorfront.png
 }
-Polygon								//Plafond
+Object
 {
-	dot = x:100, y:1150, z:200
-	dot = x:100, y:150, z:200
-	dot = x:600, y:150, z:200
-	dot = x:600, y:1150, z:200
-	texture = Plafond.png
+    type = BOX
+    posx = -106
+    posy = 22
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = Pq.png
 }
-
-
-
-/* Salle du bas */
-
-Polygon
+Object
 {
-	dot = x:100, y:650, z:200
-	dot = x:100, y:1150, z:200
-	dot = x:100, y:1150, z:0
-	dot = x:100, y:650, z:0
-	texture = Brique.png
+    type = BOX
+    posx = -106
+    posy = -78
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = Elephantride.png
 }
-Polygon
+Object
 {
-	dot = x:100, y:1150, z:200
-	dot = x:600, y:1150, z:200
-	dot = x:600, y:1150, z:0
-	dot = x:100, y:1150, z:0
-	texture = Elephantride.png
+    type = BOX
+    posx = -106
+    posy = -28
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = 150x150.png
 }
-Polygon
+Object
 {
-	dot = x:600, y:1150, z:200
-	dot = x:600, y:650, z:200
-	dot = x:600, y:650, z:0
-	dot = x:600, y:1150, z:0
-	texture = Brique.png
+    type = GRAVITY_INV
+    posx = 74
+    posy = 472
+    posz = -50
+    width = 30
+    height = 30
+    light = 100
+    texture = 150x150.png
 }
-Polygon
+Object
 {
-	dot = x:100, y:650, z:0
-	dot = x:100, y:1150, z:0
-	dot = x:600, y:1150, z:0
-	dot = x:600, y:650, z:0
-	texture = Plafond.png
+    type = ARMOR
+    posx = -26
+    posy = 672
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = shieldPotion.png
 }
-Polygon
+Object
 {
-	dot = x:100, y:650, z:0
-	dot = x:600, y:650, z:0
-	dot = x:600, y:650, z:50
-	dot = x:100, y:650, z:50
-	texture = Brique.png
+    type = HEAL
+    posx = 174
+    posy = 672
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = healthPotion.png
+}
+Object
+{
+    type = LIGHT
+    posx = 74
+    posy = 22
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = pq.png
+}
+Object
+{
+    type = LIGHT
+    posx = 74
+    posy = 22
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = pq.png
+}
+Object
+{
+    type = HEAL
+    posx = 174
+    posy = 672
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = healthPotion.png
+}
+Object
+{
+    type = ARMOR
+    posx = -26
+    posy = 672
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = shieldPotion.png
+}
+Object
+{
+    type = GRAVITY_INV
+    posx = 74
+    posy = 472
+    posz = -50
+    width = 30
+    height = 30
+    light = 100
+    texture = 150x150.png
+}
+Object
+{
+    type = BOX
+    posx = -106
+    posy = -28
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = 150x150.png
+}
+Object
+{
+    type = BOX
+    posx = -106
+    posy = -78
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = Elephantride.png
+}
+Object
+{
+    type = BOX
+    posx = -106
+    posy = 22
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = Pq.png
+}
+Object
+{
+    type = DOOR
+    posx = 274
+    posy = -28
+    posz = -20
+    width = 60
+    height = 80
+    light = 100
+    texture = doorfront.png
+}
+Object
+{
+    type = DOOR
+    posx = 274
+    posy = 72
+    posz = -20
+    width = 60
+    height = 80
+    dir = 1
+    light = 100
+    texture = doorfront.png
+}
+Object
+{
+    type = DOOR
+    posx = 274
+    posy = 172
+    posz = -20
+    width = 60
+    height = 80
+    dir = 2
+    light = 100
+    texture = doorfront.png
+}
+Object
+{
+    type = DOOR
+    posx = 274
+    posy = 272
+    posz = -20
+    width = 60
+    height = 40
+    dir = 3
+    light = 100
+    texture = doorfront.png
+}
+Object
+{
+    type = GRAVITY_INV
+    posx = -76
+    posy = -78
+    posz = 40
+    width = 30
+    height = 30
+    light = 100
+    texture = 150x150.png
+}
+Object
+{
+    type = GRAVITY_INV
+    posx = -76
+    posy = -78
+    posz = 40
+    width = 30
+    height = 30
+    light = 100
+    texture = 150x150.png
+}
+Object
+{
+    type = DOOR
+    posx = 274
+    posy = 272
+    posz = -20
+    width = 60
+    height = 40
+    dir = 3
+    light = 100
+    texture = doorfront.png
+}
+Object
+{
+    type = DOOR
+    posx = 274
+    posy = 172
+    posz = -20
+    width = 60
+    height = 80
+    dir = 2
+    light = 100
+    texture = doorfront.png
+}
+Object
+{
+    type = DOOR
+    posx = 274
+    posy = 72
+    posz = -20
+    width = 60
+    height = 80
+    dir = 1
+    light = 100
+    texture = doorfront.png
+}
+Object
+{
+    type = DOOR
+    posx = 274
+    posy = -28
+    posz = -20
+    width = 60
+    height = 80
+    light = 100
+    texture = doorfront.png
+}
+Object
+{
+    type = BOX
+    posx = -106
+    posy = 22
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = Pq.png
+}
+Object
+{
+    type = BOX
+    posx = -106
+    posy = -78
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = Elephantride.png
+}
+Object
+{
+    type = BOX
+    posx = -106
+    posy = -28
+    posz = -20
+    width = 20
+    height = 20
+    light = 100
+    texture = 150x150.png
+}
+Object
+{
+    type = GRAVITY_INV
+    posx = 74
+    posy = 472
+    posz = -50
+    width = 30
+    height = 30
+    light = 100
+    texture = 150x150.png
+}
+Object
+{
+    type = ARMOR
+    posx = -26
+    posy = 672
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = shieldPotion.png
+}
+Object
+{
+    type = HEAL
+    posx = 174
+    posy = 672
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = healthPotion.png
+}
+Object
+{
+    type = LIGHT
+    posx = 74
+    posy = 22
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = pq.png
+}
+Object
+{
+    type = LIGHT
+    posx = 74
+    posy = 22
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = pq.png
+}
+Object
+{
+    type = HEAL
+    posx = 174
+    posy = 672
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = healthPotion.png
+}
+Object
+{
+    type = ARMOR
+    posx = -26
+    posy = 672
+    posz = 30
+    width = 30
+    height = 30
+    light = 100
+    texture = shieldPotion.png
+}
+Object
+{
+    type = GRAVITY_INV
+    posx = 74
+    posy = 472
+    posz = -50
+    width = 30
+    height = 30
+    light = 100
+    texture = 150x150.png
 }

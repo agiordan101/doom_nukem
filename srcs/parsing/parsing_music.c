@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing_music.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aducimet <aducimet@student.le-101.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/03/10 18:05:41 by aducimet          #+#    #+#             */
+/*   Updated: 2020/03/10 18:05:42 by aducimet         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "doom_nukem.h"
 
 void		attribute_music(t_music *music)
@@ -8,6 +20,7 @@ void		attribute_music(t_music *music)
 	music->tmusic[3] = Mix_LoadWAV("sounds/shieldsound.mp3");
 	music->tmusic[4] = Mix_LoadWAV("sounds/slotsound.mp3");
 	music->tmusic[5] = Mix_LoadWAV("sounds/damageSound.mp3");
+	music->tmusic[6] = Mix_LoadWAV("sounds/doorsound.mp3");
 }
 
 t_music		*define_music(void)
