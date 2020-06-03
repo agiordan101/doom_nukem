@@ -1,0 +1,29 @@
+
+###########
+Player
+{
+	posx = 0
+	posy = 0
+	posz = 0
+	dir = 0
+	width = 70
+	height = 70
+	velocity = 5
+}
+Sphere
+{
+	posx = 0
+	posy = 0
+	posz = 0
+	radius = 10000
+	texture = sphere_grid.png
+}
+Polygon
+{
+	dot = x:-300 y:-300 z:-150
+	dot = x:300 y:-300 z:-150
+	dot = x:300 y:300 z:-150
+	dot = x:-300 y:300 z:-150
+	light = 100
+	texture = Plafond.png
+}

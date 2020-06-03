@@ -1,0 +1,297 @@
+	/* Chandelier origin (100, 400, 150) */
+		/* Chandelier devant */
+
+Polygon									//Manche
+{
+	dot = x:8, y:-2, z:6
+	dot = x:8, y:2, z:6
+	dot = x:8, y:2, z:-2
+	dot = x:8, y:-2, z:-2
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Socle
+{
+	dot = x:8, y:-10, z:10
+	dot = x:8, y:10, z:10
+	dot = x:8, y:10, z:6
+	dot = x:8, y:-10, z:6
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Bougie 1
+{
+	dot = x:8, y:-10, z:27
+	dot = x:8, y:-6, z:27
+	dot = x:8, y:-6, z:10
+	dot = x:8, y:-10, z:10
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 2
+{
+	dot = x:8, y:-2, z:27
+	dot = x:8, y:2, z:27
+	dot = x:8, y:2, z:10
+	dot = x:8, y:-2, z:10
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 3
+{
+	dot = x:8, y:6, z:27
+	dot = x:8, y:10, z:27
+	dot = x:8, y:10, z:10
+	dot = x:8, y:6, z:10
+	light = 1
+	texture = Vitre.png
+}
+
+		/* Chandelier Derriere */
+
+Polygon									//Manche haut
+{
+	dot = x:4, y:-2, z:2
+	dot = x:4, y:2, z:2
+	dot = x:4, y:2, z:-2
+	dot = x:4, y:-2, z:-2
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Manche bas
+{
+	dot = x:0, y:-2, z:6
+	dot = x:0, y:2, z:6
+	dot = x:0, y:2, z:2
+	dot = x:0, y:-2, z:2
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Socle
+{
+	dot = x:4, y:-10, z:10
+	dot = x:4, y:10, z:10
+	dot = x:4, y:10, z:6
+	dot = x:4, y:-10, z:6
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Bougie 1
+{
+	dot = x:4, y:-10, z:27
+	dot = x:4, y:-6, z:27
+	dot = x:4, y:-6, z:10
+	dot = x:4, y:-10, z:10
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 2
+{
+	dot = x:4, y:-2, z:27
+	dot = x:4, y:2, z:27
+	dot = x:4, y:2, z:10
+	dot = x:4, y:-2, z:10
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 3
+{
+	dot = x:4, y:6, z:27
+	dot = x:4, y:10, z:27
+	dot = x:4, y:10, z:10
+	dot = x:4, y:6, z:10
+	light = 1
+	texture = Vitre.png
+}
+
+		/* Chandelier gauche
+
+Polygon									//Manche bas
+{
+	dot = x:0, y:-2, z:2
+	dot = x:8, y:-2, z:2
+	dot = x:8, y:-2, z:-2
+	dot = x:0, y:-2, z:-2
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Manche haut
+{
+	dot = x:4, y:-2, z:6
+	dot = x:8, y:-2, z:6
+	dot = x:8, y:-2, z:2
+	dot = x:4, y:-2, z:2
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Socle
+{
+	dot = x:4, y:-10, z:10
+	dot = x:8, y:-10, z:10
+	dot = x:8, y:-10, z:6
+	dot = x:4, y:-10, z:6
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Bougie 1
+{
+	dot = x:4, y:-10, z:27
+	dot = x:8, y:-10, z:27
+	dot = x:8, y:-10, z:10
+	dot = x:4, y:-10, z:10
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 2
+{
+	dot = x:4, y:-2, z:27
+	dot = x:8, y:-2, z:27
+	dot = x:8, y:-2, z:10
+	dot = x:4, y:-2, z:10
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 3
+{
+	dot = x:4, y:6, z:27
+	dot = x:8, y:6, z:27
+	dot = x:8, y:6, z:10
+	dot = x:4, y:6, z:10
+	light = 1
+	texture = Vitre.png
+}
+
+		/* Chandelier droit
+
+Polygon									//Manche bas
+{
+	dot = x:0, y:2, z:2
+	dot = x:8, y:2, z:2
+	dot = x:8, y:2, z:-2
+	dot = x:0, y:2, z:-2
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Manche haut
+{
+	dot = x:4, y:2, z:6
+	dot = x:8, y:2, z:6
+	dot = x:8, y:2, z:2
+	dot = x:4, y:2, z:2
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Socle
+{
+	dot = x:4, y:10, z:10
+	dot = x:8, y:10, z:10
+	dot = x:8, y:10, z:6
+	dot = x:4, y:10, z:6
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Bougie 1
+{
+	dot = x:4, y:-6, z:27
+	dot = x:8, y:-6, z:27
+	dot = x:8, y:-6, z:10
+	dot = x:4, y:-6, z:10
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 2
+{
+	dot = x:4, y:2, z:27
+	dot = x:8, y:2, z:27
+	dot = x:8, y:2, z:10
+	dot = x:4, y:2, z:10
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 3
+{
+	dot = x:4, y:10, z:27
+	dot = x:8, y:10, z:27
+	dot = x:8, y:10, z:10
+	dot = x:4, y:10, z:10
+	light = 1
+	texture = Vitre.png
+}
+
+		/* Chandelier haut */
+
+Polygon									//Bougie 1
+{
+	dot = x:4, y:-10, z:27
+	dot = x:4, y:-6, z:27
+	dot = x:8, y:-6, z:27
+	dot = x:8, y:-10, z:27
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 2
+{
+	dot = x:4, y:-2, z:27
+	dot = x:4, y:2, z:27
+	dot = x:8, y:2, z:27
+	dot = x:8, y:-2, z:27
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Bougie 3
+{
+	dot = x:4, y:6, z:27
+	dot = x:4, y:10, z:27
+	dot = x:8, y:10, z:27
+	dot = x:8, y:6, z:27
+	light = 1
+	texture = Vitre.png
+}
+Polygon									//Socle 12
+{
+	dot = x:4, y:-6, z:10
+	dot = x:4, y:-2, z:10
+	dot = x:8, y:-2, z:10
+	dot = x:8, y:-6, z:10
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Socle 23
+{
+	dot = x:4, y:2, z:10
+	dot = x:4, y:6, z:10
+	dot = x:8, y:6, z:10
+	dot = x:8, y:2, z:10
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Manche
+{
+	dot = x:0, y:-2, z:2
+	dot = x:0, y:2, z:2
+	dot = x:4, y:2, z:2
+	dot = x:4, y:-2, z:2
+	light = 1
+	texture = Sol.png
+}
+
+		/* Chandelier bas */
+
+Polygon									//Manche
+{
+	dot = x:8, y:-10, z:6
+	dot = x:8, y:10, z:6
+	dot = x:4, y:10, z:6
+	dot = x:4, y:-10, z:6
+	light = 1
+	texture = Sol.png
+}
+Polygon									//Manche
+{
+	dot = x:8, y:-2, z:-2
+	dot = x:8, y:2, z:-2
+	dot = x:0, y:2, z:-2
+	dot = x:0, y:-2, z:-2
+	light = 1
+	texture = Sol.png
+}

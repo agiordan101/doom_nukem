@@ -1,0 +1,359 @@
+Player
+{
+	posx = 804
+	posy = 564
+	width = 20
+	height = 100
+	sector = 0
+	velocity = 1
+}
+Sector
+{
+	name =   polygon
+	ceilHeight = 200
+	floorHeight = 0
+	line
+	{
+		dot = (1174, 552)
+		dot = (1141, 565)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1238, 562)
+		dot = (1175, 552)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1267, 603)
+		dot = (1238, 561)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1283, 650)
+		dot = (1267, 602)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1286, 697)
+		dot = (1283, 649)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1278, 740)
+		dot = (1287, 697)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1249, 767)
+		dot = (1278, 740)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1198, 785)
+		dot = (1249, 768)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1141, 790)
+		dot = (1197, 785)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1100, 775)
+		dot = (1141, 790)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1079, 752)
+		dot = (1101, 775)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1067, 720)
+		dot = (1079, 753)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1062, 678)
+		dot = (1067, 719)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1067, 642)
+		dot = (1062, 679)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1079, 607)
+		dot = (1066, 642)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1105, 581)
+		dot = (1079, 607)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1141, 565)
+		dot = (1106, 581)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (612, 704)
+		dot = (813, 704)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (612, 704)
+		dot = (612, 775)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (564, 514)
+		dot = (564, 450)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (695, 514)
+		dot = (564, 514)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (695, 450)
+		dot = (695, 514)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (564, 450)
+		dot = (695, 450)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (926, 621)
+		dot = (926, 674)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (999, 621)
+		dot = (926, 621)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (999, 758)
+		dot = (999, 621)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (926, 758)
+		dot = (999, 758)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (926, 674)
+		dot = (926, 758)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (913, 368)
+		dot = (1067, 368)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1067, 429)
+		dot = (1067, 368)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (913, 429)
+		dot = (1067, 429)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (913, 368)
+		dot = (913, 429)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (813, 704)
+		dot = (813, 833)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (813, 833)
+		dot = (515, 833)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (515, 833)
+		dot = (515, 775)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (515, 775)
+		dot = (612, 775)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (612, 346)
+		dot = (813, 346)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (612, 346)
+		dot = (712, 246)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (712, 246)
+		dot = (813, 346)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (398, 152)
+		dot = (398, 1007)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (398, 1007)
+		dot = (1304, 1007)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1304, 1007)
+		dot = (1304, 152)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1304, 152)
+		dot = (398, 152)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+}

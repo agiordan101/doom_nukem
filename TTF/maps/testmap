@@ -1,0 +1,143 @@
+Player
+{
+	posx = 718
+	posy = 494
+	width = 25
+	height = 50
+	sector = 0
+	velocity = 1
+}
+Sector
+{
+	name = sector
+	ceilHeight = 1
+	floorHeight = 0
+	line
+	{
+		dot = (1291, 942)
+		dot = (1590, 834)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1010, 815)
+		dot = (1291, 942)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1147, 332)
+		dot = (1225, 287)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1132, 382)
+		dot = (1147, 332)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1132, 382)
+		dot = (1132, 382)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1357, 253)
+		dot = (1249, 313)
+		flags = PORTAL
+		id = 1
+		side = LEFT
+	}
+	line
+	{
+		dot = (1531, 97)
+		dot = (1357, 253)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1132, 382)
+		dot = (1249, 313)
+		flags = WALL
+		id = 0
+		side = RIGHT
+	}
+	line
+	{
+		dot = (1531, 97)
+		dot = (903, 260)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1590, 834)
+		dot = (1531, 97)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1132, 382)
+		dot = (1010, 815)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (630, 721)
+		dot = (1132, 382)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (545, 385)
+		dot = (630, 721)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (903, 260)
+		dot = (545, 385)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+	line
+	{
+		dot = (1225, 287)
+		dot = (1333, 229)
+		flags = PORTAL
+		id = 1
+		side = LEFT
+	}
+	line
+	{
+		dot = (1333, 229)
+		dot = (1531, 97)
+		flags = WALL
+		id = 0
+		side = LEFT
+	}
+}
