@@ -566,6 +566,7 @@ typedef struct				s_export
 {
 	char					*path;
 	int						fd;
+	int						pack;
 	void					*map;
 }							t_export;
 

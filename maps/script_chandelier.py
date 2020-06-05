@@ -13,7 +13,7 @@ tx = int(sys.argv[2])
 ty = int(sys.argv[3])
 tz = int(sys.argv[4])
 
-newmap_file = open(sys.argv[1][:-4] + "_translate.txt", 'w')
+newmap_file = open(sys.argv[1] + "_translate", 'w')
 
 for line in lines:
     split = line.split("x:")

@@ -103,8 +103,8 @@ static SDL_bool	game(t_win *win, t_map *map, t_player *player)
 	const Uint8 *state;
 
 	state = SDL_GetKeyboardState(NULL);
-	events_game_loop(win, map, player, &event);
 	draw(win, map, player);
+	events_game_loop(win, map, player, &event);
 	if (end_game(win, map, player, &event) || state[SDL_SCANCODE_ESCAPE])
 	{
 		if (!player->end)

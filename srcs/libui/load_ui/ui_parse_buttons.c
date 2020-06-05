@@ -6,7 +6,7 @@
 /*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 14:15:56 by gal               #+#    #+#             */
-/*   Updated: 2020/05/17 23:45:17 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/05 13:23:51 by gal              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	parse_buttons_loop(t_winui *win,
 	int			index;
 
 	index = 0;
-	while (frame && ft_strstr(text[index], "button"))
+	while (frame && text[index] && ft_strstr(text[index], "button"))
 	{
 		incre_double_int(&index, i, 1);
 		if (!ft_strchr(text[index], '{'))

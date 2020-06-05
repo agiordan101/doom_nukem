@@ -1,14 +1,15 @@
 	/* Chandelier origin (100, 400, 150) */
 		/* Chandelier devant */
 
+###########
 Polygon									//Manche
 {
 	dot = x:8, y:-2, z:6
 	dot = x:8, y:2, z:6
 	dot = x:8, y:2, z:-2
 	dot = x:8, y:-2, z:-2
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Socle
 {
@@ -16,8 +17,8 @@ Polygon									//Socle
 	dot = x:8, y:10, z:10
 	dot = x:8, y:10, z:6
 	dot = x:8, y:-10, z:6
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Bougie 1
 {
@@ -25,8 +26,8 @@ Polygon									//Bougie 1
 	dot = x:8, y:-6, z:27
 	dot = x:8, y:-6, z:10
 	dot = x:8, y:-10, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 2
 {
@@ -34,8 +35,8 @@ Polygon									//Bougie 2
 	dot = x:8, y:2, z:27
 	dot = x:8, y:2, z:10
 	dot = x:8, y:-2, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 3
 {
@@ -43,29 +44,29 @@ Polygon									//Bougie 3
 	dot = x:8, y:10, z:27
 	dot = x:8, y:10, z:10
 	dot = x:8, y:6, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 
 		/* Chandelier Derriere */
 
 Polygon									//Manche haut
 {
-	dot = x:4, y:-2, z:2
+	dot = x:4, y:-2, z:6
+	dot = x:4, y:2, z:6
 	dot = x:4, y:2, z:2
-	dot = x:4, y:2, z:-2
-	dot = x:4, y:-2, z:-2
-	light = 1
-	texture = Sol.png
+	dot = x:4, y:-2, z:2
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Manche bas
 {
-	dot = x:0, y:-2, z:6
-	dot = x:0, y:2, z:6
-	dot = x:0, y:2, z:2
 	dot = x:0, y:-2, z:2
-	light = 1
-	texture = Sol.png
+	dot = x:0, y:2, z:2
+	dot = x:0, y:2, z:-2
+	dot = x:0, y:-2, z:-2
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Socle
 {
@@ -73,8 +74,8 @@ Polygon									//Socle
 	dot = x:4, y:10, z:10
 	dot = x:4, y:10, z:6
 	dot = x:4, y:-10, z:6
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Bougie 1
 {
@@ -82,8 +83,8 @@ Polygon									//Bougie 1
 	dot = x:4, y:-6, z:27
 	dot = x:4, y:-6, z:10
 	dot = x:4, y:-10, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 2
 {
@@ -91,8 +92,8 @@ Polygon									//Bougie 2
 	dot = x:4, y:2, z:27
 	dot = x:4, y:2, z:10
 	dot = x:4, y:-2, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 3
 {
@@ -100,8 +101,8 @@ Polygon									//Bougie 3
 	dot = x:4, y:10, z:27
 	dot = x:4, y:10, z:10
 	dot = x:4, y:6, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 
 		/* Chandelier gauche
@@ -112,8 +113,8 @@ Polygon									//Manche bas
 	dot = x:8, y:-2, z:2
 	dot = x:8, y:-2, z:-2
 	dot = x:0, y:-2, z:-2
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Manche haut
 {
@@ -121,8 +122,8 @@ Polygon									//Manche haut
 	dot = x:8, y:-2, z:6
 	dot = x:8, y:-2, z:2
 	dot = x:4, y:-2, z:2
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Socle
 {
@@ -130,8 +131,8 @@ Polygon									//Socle
 	dot = x:8, y:-10, z:10
 	dot = x:8, y:-10, z:6
 	dot = x:4, y:-10, z:6
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Bougie 1
 {
@@ -139,8 +140,8 @@ Polygon									//Bougie 1
 	dot = x:8, y:-10, z:27
 	dot = x:8, y:-10, z:10
 	dot = x:4, y:-10, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 2
 {
@@ -148,8 +149,8 @@ Polygon									//Bougie 2
 	dot = x:8, y:-2, z:27
 	dot = x:8, y:-2, z:10
 	dot = x:4, y:-2, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 3
 {
@@ -157,8 +158,8 @@ Polygon									//Bougie 3
 	dot = x:8, y:6, z:27
 	dot = x:8, y:6, z:10
 	dot = x:4, y:6, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 
 		/* Chandelier droit
@@ -169,8 +170,8 @@ Polygon									//Manche bas
 	dot = x:8, y:2, z:2
 	dot = x:8, y:2, z:-2
 	dot = x:0, y:2, z:-2
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Manche haut
 {
@@ -178,8 +179,8 @@ Polygon									//Manche haut
 	dot = x:8, y:2, z:6
 	dot = x:8, y:2, z:2
 	dot = x:4, y:2, z:2
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Socle
 {
@@ -187,8 +188,8 @@ Polygon									//Socle
 	dot = x:8, y:10, z:10
 	dot = x:8, y:10, z:6
 	dot = x:4, y:10, z:6
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Bougie 1
 {
@@ -196,8 +197,8 @@ Polygon									//Bougie 1
 	dot = x:8, y:-6, z:27
 	dot = x:8, y:-6, z:10
 	dot = x:4, y:-6, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 2
 {
@@ -205,8 +206,8 @@ Polygon									//Bougie 2
 	dot = x:8, y:2, z:27
 	dot = x:8, y:2, z:10
 	dot = x:4, y:2, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 3
 {
@@ -214,8 +215,8 @@ Polygon									//Bougie 3
 	dot = x:8, y:10, z:27
 	dot = x:8, y:10, z:10
 	dot = x:4, y:10, z:10
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 
 		/* Chandelier haut */
@@ -226,8 +227,8 @@ Polygon									//Bougie 1
 	dot = x:4, y:-6, z:27
 	dot = x:8, y:-6, z:27
 	dot = x:8, y:-10, z:27
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 2
 {
@@ -235,8 +236,8 @@ Polygon									//Bougie 2
 	dot = x:4, y:2, z:27
 	dot = x:8, y:2, z:27
 	dot = x:8, y:-2, z:27
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Bougie 3
 {
@@ -244,8 +245,8 @@ Polygon									//Bougie 3
 	dot = x:4, y:10, z:27
 	dot = x:8, y:10, z:27
 	dot = x:8, y:6, z:27
-	light = 1
-	texture = Vitre.png
+	light = 100
+	texture = airvent.png
 }
 Polygon									//Socle 12
 {
@@ -253,8 +254,8 @@ Polygon									//Socle 12
 	dot = x:4, y:-2, z:10
 	dot = x:8, y:-2, z:10
 	dot = x:8, y:-6, z:10
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Socle 23
 {
@@ -262,8 +263,8 @@ Polygon									//Socle 23
 	dot = x:4, y:6, z:10
 	dot = x:8, y:6, z:10
 	dot = x:8, y:2, z:10
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Manche
 {
@@ -271,8 +272,8 @@ Polygon									//Manche
 	dot = x:0, y:2, z:2
 	dot = x:4, y:2, z:2
 	dot = x:4, y:-2, z:2
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 
 		/* Chandelier bas */
@@ -283,8 +284,8 @@ Polygon									//Manche
 	dot = x:8, y:10, z:6
 	dot = x:4, y:10, z:6
 	dot = x:4, y:-10, z:6
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }
 Polygon									//Manche
 {
@@ -292,6 +293,6 @@ Polygon									//Manche
 	dot = x:8, y:2, z:-2
 	dot = x:0, y:2, z:-2
 	dot = x:0, y:-2, z:-2
-	light = 1
-	texture = Sol.png
+	light = 100
+	texture = gold.jpg
 }

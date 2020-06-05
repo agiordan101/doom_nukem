@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 
 #include "ui_texture.h"
-# ifdef __linux__
-#  include "SDL2/SDL.h"
-#  include "SDL2/SDL_image.h"
-# else
-#  include "SDL.h"
-#include "SDL_image.h"
-# endif
+#ifdef __linux__
+# include "SDL2/SDL.h"
+# include "SDL2/SDL_image.h"
+#else
+# include "SDL.h"
+# include "SDL_image.h"
+#endif
 #include "ui_error.h"
 
 SDL_Texture			*ui_load_image(SDL_Renderer *rend, const char *file)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_files.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*   By: widrye <widrye@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 12:29:01 by widrye            #+#    #+#             */
-/*   Updated: 2020/05/16 23:35:59 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/03 17:39:29 by widrye           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int			is_new_bin_dir(char *name)
 {
 	return (!ft_strcmp(name, "Sounds") ||
 			!ft_strcmp(name, "Fonts") ||
+			!ft_strcmp(name, "Interfaces") ||
 			!ft_strcmp(name, "###########"));
 }
 
@@ -75,10 +76,13 @@ void		create_tmp_bin_files(int fd)
 	mkdir("textures", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
 	mkdir("sounds", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
 	mkdir("TTF", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+	mkdir("interfaces", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
 	if (!create_tmp_files(fd, "textures/"))
 		ft_putendl("failed to create tmp textures files");
 	if (!create_tmp_files(fd, "sounds/"))
 		ft_putendl("failed to create tmp sound files");
 	if (!create_tmp_files(fd, "TTF/"))
 		ft_putendl("failed to create tmp .TTF files");
+	if (!create_tmp_files(fd, "interfaces/"))
+		ft_putendl("failed to create tmp interfaces files");
 }

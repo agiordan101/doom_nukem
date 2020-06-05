@@ -12,22 +12,6 @@
 
 #include "doom_nukem.h"
 
-SDL_Texture		*define_credit(t_win *win)
-{
-	SDL_Texture	*text;
-	TTF_Font	*police;
-	char		*tmp;
-
-	police = TTF_OpenFont("TTF/DooM.ttf", 65);
-	tmp = "Aducimet Agiordan Gmomacho Widrye";
-	text = generate_text(win->rend,
-							police,
-							tmp,
-							(SDL_Color){255, 255, 255, 50});
-	free(tmp);
-	return (text);
-}
-
 void			print_credit(t_win *win)
 {
 	SDL_Event	event;

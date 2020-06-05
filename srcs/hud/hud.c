@@ -73,9 +73,6 @@ void	hud_armor(t_win *win, t_player *player, t_texhud *texhud)
 		armorposx += (win->w * 0.0009);
 		i++;
 	}
-	SDL_RenderCopy(win->rend, texhud->tex[13], NULL,
-	(&(SDL_Rect){(win->w * 0.7), (win->h * 0.025),
-	(win->w * 0.28), (win->h * 0.2625)}));
 }
 
 void	hud(t_win *win, t_player *player, t_texhud *texhud)

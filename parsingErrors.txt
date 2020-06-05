@@ -1,1 +1,0 @@
-seg fault si il manque une parenthese

@@ -6,7 +6,7 @@
 /*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 14:21:30 by gal               #+#    #+#             */
-/*   Updated: 2020/05/28 14:36:15 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/03 15:45:40 by gal              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int				editor_loop(t_win *win, t_map *map)
 {
 	SDL_bool			loop;
 
+	SDL_SetWindowResizable(win->ptr, SDL_FALSE);
+	SDL_SetWindowSize(win->ptr, WIDTH, HEIGHT);
 	if (!map->editor.export.path)
 		map->editor.export.path = ft_strdup("./maps/new_map");
 	if (!init_editor_menu(win, map))

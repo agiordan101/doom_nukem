@@ -6,7 +6,7 @@
 /*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 17:34:34 by gmonacho          #+#    #+#             */
-/*   Updated: 2020/05/18 11:35:33 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/05 13:27:34 by gal              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ static int		ui_load_text(t_winui *win, char **text)
 		if (ft_strcmp(text[i], "frame") == 0)
 		{
 			i += 2;
-			if (!parse_frame(win, &text[i], &i))
+			if (!parse_frame(win, &text[i], &i) || i > ft_2dstrlen(text))
 				return (ui_load_error("ui_load", "p_f failed", 0, i + 1));
 			if (text[i])
 			{

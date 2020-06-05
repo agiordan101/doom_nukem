@@ -98,7 +98,7 @@ t_fdot_3d		events_move(t_map *map, t_player *player, const Uint8 *state)
 	t_fdot_3d	move;
 
 	move = (t_fdot_3d){0, 0, 0};
-	player->sprint = state[SDL_SCANCODE_LCTRL] ? 2 : 1;
+	player->sprint = state[SDL_SCANCODE_LSHIFT] ? 2 : 1;
 	if (state[SDL_SCANCODE_W])
 		move = fdot_3d_add(move,\
 						(t_fdot_3d){-player->const_vel * player->sprint, 0, 0});
@@ -118,7 +118,7 @@ t_fdot_3d		events_move(t_map *map, t_player *player, const Uint8 *state)
 		player->jump = -0.5 - map->gravity - sqrt(0.24 + map->gravity *\
 						(map->gravity + 1) + player->height);
 	map->last_move = (t_fdot_3d){0, 0, 0};
-	player->sneak = state[SDL_SCANCODE_LSHIFT] ? 1 : 0;
+	player->sneak = state[SDL_SCANCODE_LCTRL] ? 1 : 0;
 	return (move);
 }
 

@@ -6,7 +6,7 @@
 /*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/10 16:05:33 by gal               #+#    #+#             */
-/*   Updated: 2020/05/16 23:27:58 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/02 19:16:22 by gal              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int				create_window(t_win *win, const char *title,
 {
 	if (!(win->ptr = SDL_CreateWindow(title, rect.x, rect.y,
 							rect.w, rect.h, flags)))
-		return (ret_error(SDL_GetError()));
+		return (ui_ret_error("create_window", SDL_GetError(), 0));
 	win->w = rect.w;
 	win->h = rect.h;
 	win->frames = NULL;
@@ -45,10 +45,10 @@ int				create_window(t_win *win, const char *title,
 	SDL_RENDERER_SOFTWARE)) ||\
 		!(win->rend_texture = SDL_CreateTexture(win->rend,
 	SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, win->w, win->h)))
-		return (ret_error(SDL_GetError()));
+		return (ui_ret_error("create_window", SDL_GetError(), 0));
 	SDL_SetRenderDrawBlendMode(win->rend, SDL_BLENDMODE_BLEND);
 	if (!(win->winui = (t_winui*)ft_memalloc(sizeof(t_winui))))
-		return (ui_ret_error("create_window", "2", 0));
+		return (ui_ret_error("create_window", "winui allocation faield", 0));
 	win->texhud = NULL;
 	win->winui->ptr = win->ptr;
 	win->winui->rend = win->rend;

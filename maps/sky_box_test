@@ -25,5 +25,5 @@ Polygon
 	dot = x:300 y:300 z:-150
 	dot = x:-300 y:300 z:-150
 	light = 100
-	texture = Plafond.png
+	texture = window.png
 }

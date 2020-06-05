@@ -6,11 +6,12 @@
 /*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 00:06:08 by gal               #+#    #+#             */
-/*   Updated: 2020/05/17 23:35:59 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/02 19:13:10 by gal              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "doom_nukem.h"
+#include "ui_error.h"
 
 static void		init_player_hud(t_player *player)
 {
@@ -53,11 +54,11 @@ int				init_music_timer(t_doom_music *music)
 	if (music)
 	{
 		if (!(music->editor_music = Mix_LoadMUS("sounds/map_editor.wav")))
-			return (ret_error(SDL_GetError()));
+			return (ui_ret_error("init_music_timer", SDL_GetError(), 0));
 		if (!(music->credit_music = Mix_LoadMUS("sounds/Remember_chill.mp3")))
-			return (ret_error(SDL_GetError()));
+			return (ui_ret_error("init_music_timer", SDL_GetError(), 0));
 		if (!(music->menu_music = Mix_LoadMUS("sounds/doomMenu.wav")))
-			return (ret_error(SDL_GetError()));
+			return (ui_ret_error("init_music_timer", SDL_GetError(), 0));
 	}
 	return (1);
 }

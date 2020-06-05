@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ed_export.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*   By: widrye <widrye@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 14:21:03 by gal               #+#    #+#             */
-/*   Updated: 2020/05/18 12:51:55 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/03 17:55:05 by widrye           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "doom_nukem.h"
 #include "ui_error.h"
 
-void		export_content(t_export *export)
+void			export_content(t_export *export)
 {
 	t_mob		*m;
 	t_poly		*p;
@@ -42,15 +42,19 @@ void		export_content(t_export *export)
 	}
 }
 
-void		ed_export(void *ed_export)
+void			ed_export(void *ed_export)
 {
 	t_export	*export;
 	t_map		*map;
 
 	export = (t_export*)ed_export;
 	map = (t_map*)export->map;
-	export->fd = open(export->path, O_WRONLY | O_CREAT | O_TRUNC,
+	if (!export->pack)
+	{
+		export->fd = open(export->path, O_WRONLY | O_CREAT | O_TRUNC,
 	S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+	}
+	export->pack = 0;
 	if (export->fd)
 	{
 		ft_putendl_fd("\n###########", export->fd);
@@ -61,32 +65,4 @@ void		ed_export(void *ed_export)
 	else
 		ui_ret_error("ed_export", "opening/creating failed", 0);
 	ft_putendl("--Map Exported--");
-}
-
-void		ed_package(void *ed_exp)
-{
-	t_export	*export;
-
-	export = (t_export*)ed_exp;
-	export->fd = open(export->path, O_CREAT | O_WRONLY | O_TRUNC,
-	S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
-	ft_putendl_fd("#GAMEREADY#\nTextures", export->fd);
-	if (!ed_export_textures(export->fd, (t_map *)export->map))
-	{
-		ui_ret_error("ed_package", "failed to export textures", 0);
-		return ;
-	}
-	ft_putendl_fd("Sounds", export->fd);
-	if (!ed_export_sounds(export->fd))
-	{
-		ui_ret_error("ed_package", "failed to export sounds", 0);
-		return ;
-	}
-	ft_putendl_fd("\nFonts", export->fd);
-	if (!ed_export_fonts(export->fd))
-	{
-		ui_ret_error("ed_package", "failed to export fonts", 0);
-		return ;
-	}
-	ed_export(ed_exp);
 }

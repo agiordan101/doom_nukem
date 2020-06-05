@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   doom_nukem.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*   By: widrye <widrye@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/19 09:32:17 by gal               #+#    #+#             */
-/*   Updated: 2020/05/28 16:45:00 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/05 14:07:48 by widrye           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,9 @@
 # include "libft.h"
 # include <time.h>
 
-# define WIDTH			    600
-# define HEIGHT				400
+# define WIDTH			    960
+# define HEIGHT				720
 # define SENSITIVE			0.0015
-
-/*
-** 0.00000015 pour aducimet
-*/
 
 # define OBJECT_ROTATION_VELOCITY	10
 

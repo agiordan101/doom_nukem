@@ -1,3 +1,0 @@
-/home/antoine/Documents/Doom_nukem/CMakeFiles/rebuild_cache.dir
-/home/antoine/Documents/Doom_nukem/CMakeFiles/doom-nukem.dir
-/home/antoine/Documents/Doom_nukem/CMakeFiles/edit_cache.dir
